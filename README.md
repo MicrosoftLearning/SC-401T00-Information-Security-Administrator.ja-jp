@@ -1,0 +1,1 @@
+# SC-401T00-Information-Security-Administrator.ja-jp
