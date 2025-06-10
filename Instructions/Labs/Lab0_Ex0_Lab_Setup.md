@@ -27,77 +27,79 @@ lab:
 
 このタスクでは、Microsoft Purview ポータルで監査を有効にして、ポータル アクティビティを監視します。
 
-1. Client 1 VM (SC-401-CL1) には引き続き **SC-401-CL1\admin** アカウントでログインし、Microsoft 365 には MOD 管理者アカウントでログインしている必要があります。
+1. Client 1 VM (SC-401-CL1) に **SC-401-CL1\admin** アカウントでログインし、Microsoft 365 には MOD 管理者アカウントでログインします。
 
-1. マウスの右ボタンで Windows ボタンを選択して管理者特権のターミナル ウィンドウを開き、**[ターミナル (管理者)]** を選択します。
+1. Microsoft Edge で、Microsoft Purview ポータル `https://purview.microsoft.com` にアクセスして、ログインします。
 
-1. ターミナル ウィンドウで**モジュールのインストール** コマンドレットを実行して、最新の **Exchange Online PowerShell** モジュール バージョンをインストールします。
+1. 新しい Microsoft Purview ポータルに関するメッセージが画面に表示されます。 **[はじめに]** を選択して、新しいポータルにアクセスします。
+
+    ![[ようこそ新しい Microsoft Purview ポータルへ] 画面のスクリーンショット。](../Media/welcome-purview-portal.png)
+
+1. 左側のサイド バーから **[ソリューション]** を選択し、**[監査]** を選択します。
+
+1. **[検索]** ページで、**[ユーザーと管理者のアクティビティの記録を開始する]** バーを選択して監査ログを有効にします。
+
+    ![[ユーザーと管理者のアクティビティの記録を開始する] ボタンを示すスクリーンショット。](../Media/enable-audit-button.png)
+
+1. このオプションを選択すると、このページに青いバーが表示されなくなるはずです。
+
+<!----- PowerShell instructions
+
+1. Open an elevated Terminal window by selecting the Windows button with the right mouse button and then select **Terminal (Admin)**.
+
+1. Run the **Install Module** cmdlet in the terminal window to install the latest **Exchange Online PowerShell** module version:
 
     ```powershell
     Install-Module ExchangeOnlineManagement
     ```
 
-1. NuGet プロバイダープロンプトで、「はい」を示す「**Y**」を入力し、**Enter** キーを押します。
+1. Confirm the NuGet provider prompt  by typing **Y** for Yes and press **Enter**.
 
-1. 信頼されていないレポジトリ セキュリティ ダイアログで、[はい] を示す **[Y]** を選択して確定し、**Enter** キーを押します。  この処理は、完了までに時間がかかる場合があります。
+1. Confirm the Untrusted repository security dialog with **Y** for Yes and press **Enter**.  This process may take some time to complete.
 
-1. **Set-ExecutionPolicy** コマンドレットを実行して、実行ポリシーを変更し、**Enter** キーを押します。
+1. Run the **Set-ExecutionPolicy** cmdlet to change your execution policy and press **Enter**
 
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
     ```
 
-1. PowerShell ウィンドウを閉じます。
+1. Close the PowerShell window.
 
-1. タスク バーの Windows ボタンを右クリックして、管理者特権以外の通常の PowerShell ウィンドウを開き、**[ターミナル (管理者)]** を選択します。
+1. Open a regular (non-elevated) PowerShell window by right-clicking the Windows button and selecting **Terminal**.
 
-1. **Connect-ExchangeOnline** コマンドレットを実行し、Exchange Online PowerShell モジュールを使用してテナントに接続します。
+1. Run the **Connect-ExchangeOnline** cmdlet to use the Exchange Online PowerShell module and connect to your tenant:
 
     ```powershell
     Connect-ExchangeOnline
     ```
 
-1. **[サインイン]** ウィンドウが表示されたら、`admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (ZZZZZZ はラボ ホスティング プロバイダーから支給された固有のテナント ID)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
+1. When the **Sign in** window is displayed, sign in as `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
-1. 監査が有効になっているかどうかを確認するには、**Get-AdminAuditLogConfig** コマンドレットを実行します。
+1. To check if Audit is enabled, run the **Get-AdminAuditLogConfig** cmdlet:
 
     ```powershell
     Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
     ```
 
-1. _UnifiedAuditLogIngestionEnabled_ が false を返す場合、監査は無効になっています。
+1. If _UnifiedAuditLogIngestionEnabled_ returns false, then Audit is disabled.
 
-1. 監査ログを有効にするには、**Set-AdminAuditLogConfig** コマンドレットを実行し、**UnifiedAuditLogIngestionEnabled** を _true_ に設定します。
+1. To enable the Audit log, run the **Set-AdminAuditLogConfig** cmdlet and set the **UnifiedAuditLogIngestionEnabled** to _true_:
 
     ```powershell
     Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
     ```
 
-1. 監査が有効になっていることを確認するには、**Get-AdminAuditLogConfig** コマンドレットをもう一度実行します。
+1. To verify that Audit is enabled, run the **Get-AdminAuditLogConfig** cmdlet again:
 
     ```powershell
     Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
     ```
 
-1. _UnifiedAuditLogIngestionEnabled_ から _true_ が返され、監査が有効になっていることがわかります。
-
-<!---
-
-1. In Microsoft Edge, navigate to the Microsoft Purview portal, `https://purview.microsoft.com`, and log in.
-
-1. A message about the new Microsoft Purview portal will appear on the screen. Select the option to agree with the terms of data flow disclosure and the privacy statement, then select **Try now**.
-
-    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/welcome-purview-portal.png)
-
-1. Select **Solutions** from the left sidebar, then select **Audit**.
-
-1. On the **Search** page, select the **Start recording user and admin activity** bar to enable audit logging.
-
-    ![Screenshot showing the Start recording user and admin activity button.](../Media/enable-audit-button.png)
-
-1. Once you select this option, the blue bar should disappear from this page.
+1. _UnifiedAuditLogIngestionEnabled_ should return _true_ to let you know Audit is enabled.
 
 -->
+
+Microsoft 365 で監査を正常に有効にしました。
 
 ## タスク 2 - ラボ演習のユーザー パスワードを設定する
 
@@ -147,17 +149,29 @@ lab:
 
 これでデバイスのオンボーディングが有効となりました。デバイスをエンドポイント DLP ポリシーで保護するためにオンボードを開始できます。 この機能を有効にするプロセスには、最大 30 分かかる場合があります。
 
-## タスク 4 - インサイダー リスク分析を有効にする
+## タスク 4 - インサイダー リスク分析とデータ共有を有効にする
 
-このタスクでは、インサイダー リスク管理の分析を有効にします。
+このタスクでは、インサイダー リスク管理の分析とデータ共有を有効にします。
 
 1. Client 1 VM (SC-401-CL1) には引き続き **SC-401-CL1\admin** アカウントでログインし、Microsoft Purview には MOD 管理者アカウントでログインしている必要があります。
 
 1. Microsoft Purview で、**[設定]** > **[インサイダー リスク管理]** > **[分析]** に移動します。
 
-1. **[分析]** を **[オン]** に切り替え、**[保存]** を選択します。
+1. これらの設定を **[オン]** に切り替えます。
 
-インサイダー リスク管理の分析を有効にしました。
+   - **テナント レベルの分析情報を表示する**
+
+   - **ユーザー レベルの分析情報を表示する**
+
+1. ページの下部にある **[保存]** を選択します。
+
+1. 左側のナビゲーション ウィンドウで **[データ共有]** を選択します。
+
+1. [データ共有] セクションで、**[ユーザー リスクの詳細を他のセキュリティ ソリューションと共有する]** を **[オン]** に切り替えます。
+
+1. ページの下部にある **[保存]** を選択します。
+
+インサイダー リスク管理の分析とデータ共有を有効にしました。
 
 ## タスク 5 - Microsoft Defender XDR を初期化する
 

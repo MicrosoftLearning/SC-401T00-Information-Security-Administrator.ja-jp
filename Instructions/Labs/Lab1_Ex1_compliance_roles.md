@@ -62,8 +62,6 @@ Contoso Ltd. の最近採用された情報セキュリティ管理者として�
 
 1. 新しい Microsoft Purview ポータルに関するメッセージが画面に表示されます。 **[はじめに]** を選択して、新しいポータルにアクセスします。
 
-    ![[ようこそ新しい Microsoft Purview ポータルへ] 画面のスクリーンショット。](../Media/welcome-purview-portal.png)
-
 1. 新しい Microsoft Purview ポータルについて理解します。 終了したら、ブラウザーの画面を開いたままにしておきます。
 
 Joni Sherman のアカウントへの切り替えが完了し、ラボを開始する準備ができました。

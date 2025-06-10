@@ -19,7 +19,7 @@ Contoso Ltd. で情報セキュリティ管理者として新しく採用され�
 
 このタスクでは、Windows 11 デバイスをオンボードし、エンドポイント DLP ポリシーで保護されるようにします。
 
-1. **Client 2 VM (SC-401-CL2)** に **SC-401-cl1\admin** アカウントでログインします。
+1. **Client 2 VM (SC-401-CL2)** に **SC-401-cl2\admin** アカウントでログインします。
 
 1. Microsoft Edge を開き、**`https://purview.microsoft.com`** に移動して、**Joni Sherman** として Microsoft Purview ポータルにログインします。 `JoniS@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (ZZZZZZ はラボ ホスティング プロバイダーから支給された固有のテナント ID)。 Joni のパスワードは、前の演習で設定しました。
 
@@ -65,7 +65,7 @@ Contoso Ltd. で情報セキュリティ管理者として新しく採用され�
 
 このタスクでは、USB ドライブへの機密情報の転送をブロックする DLP ポリシーを作成します。 これにより、データが承認なしでオフサイトに取り込まれるリスクを軽減できます。
 
-1. Client 1 VM (SC-401-CL1) に SC-401-cl1\admin アカウントでログインします。
+1. Client 1 VM (SC-401-CL1) に SC-401-cl1\admin アカウントでサインインします。
 
 1. 引き続き、Microsoft Purview ポータルの **[デバイス]** ページに、Joni Sherman としてログインしている必要があります。
 

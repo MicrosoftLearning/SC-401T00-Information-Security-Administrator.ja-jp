@@ -184,94 +184,92 @@ lab:
 
 Teams メッセージを自動的に削除する前に 3 年間保持する静的アイテム保持ポリシーを構成しました。
 
-<!------ Commenting out until tenant bug issues are resolved
-## Task 5 – Create an adaptive scope
+## タスク 5 - アダプティブ スコープを作成する
 
-In this task, you'll define an adaptive scope that targets Microsoft 365 groups associated with leadership and operations roles.
+このタスクでは、リーダーシップと運用の役割に関連付けられている Microsoft 365 グループを対象とするアダプティブ スコープを定義します。
 
-1. In Microsoft Purview, **Settings** > **Roles and scopes** > **Adaptive scopes**.
+1. Microsoft Purview で、**[設定]**、**[ロールとスコープ]**、**[アダプティブ スコープ]** の順に移動します。
 
-1. On the **Adaptive scopes** page select **+ Create scope**.
+1. **[アダプティブ スコープ]** ページで、 **[+ スコープを作成]** を選択します。
 
-1. On the **Name your adaptive policy scope** page enter:
+1. **[アダプティブ ポリシー スコープの名前を設定]** ページで、次を入力します。
 
-    - **Name**: `Leadership and Ops Groups`
-    - **Description**: `Targets Leadership and Operations M365 groups with privileged access to sensitive data.`
+    - **名前**: `Leadership and Ops Groups`
+    - **説明**: `Targets Leadership and Operations M365 groups with privileged access to sensitive data.`
 
-1. Select **Next**.
+1. [**次へ**] を選択します。
 
-1. On the **Assign admin unit** page select **Next**.
+1. **[管理単位の割り当て]** ページで、 **[次へ]** を選択します。
 
-1. On the **What type of scope do you want to create?** page select **Users**, then select **Next**.
+1. **[作成するスコープの種類]** ページで、**[ユーザー]** を選択してから、**[次へ]** を選択します。
 
-1. On the **Create the query to define users** page, in the **User attributes** section, ensure these values are selected for the user attribute configuration:
+1. **[ユーザーを定義するクエリの作成]** ページの **[ユーザー属性]** セクションで、ユーザー属性の構成に対してこれらの値が選択されていることを確認します。
 
-   - Select the **Attribute** dropdown then select **Department**
-   - Leave the default **is equal to** value in the next field
-   - Enter `Leadership` as the **Value**
+   - **[属性]** ドロップダウンを選択し、**[部署]** を選択します
+   - 既定値は次のフィールドの値と**同じ**にします
+   - **値**として `Leadership` を入力します
 
-1. Add a second attribute by selecting **+ Add attribute** on the **Create the query to define users** page. In the new field under the one we just configured, configure these values:
+1. 2 つ目の属性を追加するには、 **[ユーザーを定義するクエリの作成]** ページで **[+ 属性を追加]** を選択します。 先ほど構成した新しいフィールドで、次の値を構成します。
 
-   - Select the dropdown for the query operator and update it from And to **Or**
-   - Select the **Attribute** dropdown then select **Department**
-   - Leave the default **is equal to** value in the next field
-   - Enter `Operations` as the **Value**
+   - クエリ演算子のドロップダウンを選択し、[And] から **[Or]** に更新します
+   - **[属性]** ドロップダウンを選択し、**[部署]** を選択します
+   - 既定値は次のフィールドの値と**同じ**にします
+   - **値**として `Operations` を入力します
 
-1. Select **Next**.
+1. [**次へ**] を選択します。
 
-1. On the **Review and finish** page select **Submit**.
+1. **[確認と完了]** ページで、**[送信]** を選択します。
 
-1. Once your adaptive scope is created select **Done** on the **Your scope was created** page.
+1. アダプティブ スコープが作成されたら、**[スコープが作成されました]** ページで **[完了]** を選択します。
 
-You've created an adaptive scope to support targeted retention for privileged groups in the organization.
+組織内の特権グループの対象となるリテンション期間をサポートするアダプティブ スコープを作成しました。
 
-## Task 6 – Create an adaptive retention policy
+## タスク 6 - アダプティブ アイテム保持ポリシーを作成する
 
-In this task, you'll use the adaptive scope you created to configure a retention policy for Microsoft 365 groups with sensitive responsibilities.
+このタスクでは、作成したアダプティブ スコープを使用して、機密性の高い役割を持つ Microsoft 365 グループのアイテム保持ポリシーを構成します。
 
-1. In Microsoft Purview, navigate to **Solutions** > **Data Lifecycle Management** > **Policies** >  **Retention policies**.
+1. Microsoft Purview で、**[ソリューション]**、**[データ ライフサイクル管理]**、**[ポリシー]**、**[保持ポリシー]** の順に移動します。
 
-1. On the **Retention policies** page, select **+ New retention policy**.
+1. **[保持ポリシー]** ページで、**[+ 新しい保持ポリシー]** を選択します。
 
-1. On the **Name your retention policy** page enter:
+1. **[アイテム保持ポリシーの名前を設定]** ページで以下を入力します。
 
-    - **Name**: `Privileged Group Retention`
-    - **Description**: `Retains content from Leadership and Operations groups for 5 years to support audit and investigation.`
+    - **名前**: `Privileged Group Retention`
+    - **説明**: `Retains content from Leadership and Operations groups for 5 years to support audit and investigation.`
 
-1. Select **Next**.
+1. [**次へ**] を選択します。
 
-1. On the **Policy Scope** page select **Next**.
+1. **[Policy Scope] (ポリシー スコープ)** ページで、**[次へ]** を選択します。
 
-1. On the **Choose the type of retention policy to create** page select **Adaptive** then select **Next**.
+1. **[作成するアイテム保持ポリシーの種類を選択する]** ページで、 **[アダプティブ]** を選択し、 **[次へ]** を選択します。
 
-1. On the **Choose adaptive policy scopes and locations** page select **+ Add scopes**.
+1. **[アダプティブ ポリシーのスコープと場所の選択]** ページで、 **[+ スコープを追加]** を選択します。
 
-1. On the **Choose adaptive policy scopes** flyout panel select the checkbox for **Leadership and Ops Groups** then select **Add** at the bottom of the panel.
+1. **[アダプティブ ポリシー スコープの選択]** ポップアップ パネルで、**[リーダーシップと運用グループ]** のチェックボックスをオンにして、パネルの下部にある **[追加]** を選択します。
 
-1. Back on the **Choose locations to apply the policy** enable:
+1. **[ポリシーを適用する場所の選択]** に戻り、次を有効にします。
 
-    - Microsoft 365 Group mailboxes & sites
-    - Leave all other locations disabled.
+    - Microsoft 365 グループのメールボックスとサイト
+    - 他のすべての場所は無効のままにします。
 
-1. Select **Next**.
+1. [**次へ**] を選択します。
 
-1. On the **Decide if you want to retain content, delete it, or both** page, ensure these values are set for the retention configuration:
+1. **[コンテンツを保持するか、削除するか、またはその両方を行うかを決定する]** ページで、保持の構成に次の値が設定されていることを確認します。
 
-   - Select **Retain items for a specific period**.
-   - Under **Retain items for a specific period**, select **5 years** from the dropdown list
-   - **Start the retention period based on**: When items were last modified
-   - **At the end of the retention period**: Delete items automatically
+   - **[特定の期間アイテムを保持]** を選択します。
+   - **[特定の期間アイテムを保持]** の下で、ドロップダウン リストから **[5 年]** を選択します。
+   - **保持期間開始の条件**:アイテムが最後に変更されたとき
+   - **[保持期間の終了時]** :アイテムを自動的に削除する
 
-1. Select **Next**.
+1. [**次へ**] を選択します。
 
-1. On the **Review and finish** page select **Submit**.
+1. **[確認と完了]** ページで、**[送信]** を選択します。
 
-1. Select **Done** once the policy is created.
+1. ポリシーが作成されたら、**[完了]** を選択します。
 
-You've created a retention policy that applies to content owned by privileged groups, retaining it for five years before deletion.
--->
+特権グループが所有するコンテンツに適用され、削除前に 5 年間コンテンツを保持するアイテム保持ポリシーを作成しました。
 
-## タスク 5 - SharePoint コンテンツを復元する
+## タスク 7 - SharePoint コンテンツを復元する
 
 このタスクでは、SharePoint サイトから削除されたドキュメントの復元をシミュレートして、回復オプションを検証します。
 
@@ -298,3 +296,5 @@ You've created a retention policy that applies to content owned by privileged gr
 1. 左側のサイド バーで **[ドキュメント]** を選択し、ファイルが復元されたことを確認します。
 
 SharePoint サイトの削除したドキュメントを復元することができました。
+
+削除されたコンテンツを SharePoint から復元し、偶発的または未承認の削除が発生した場合のドキュメントの回復を検証しました。
