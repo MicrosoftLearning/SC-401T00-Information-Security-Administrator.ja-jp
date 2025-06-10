@@ -165,8 +165,6 @@ Defender for Endpoint と Microsoft Purview 間のアラートの共有を正常
 
 このタスクでは、ポリシー インジケーターを構成して、インサイダー リスク ポリシーで使用できる優先ユーザー グループを作成します。
 
-> [!note] 前のタスクでの統合処理が完了していない場合、Microsoft Defender for Endpoint インジケーターは灰色表示され、選択できない可能性があります。 その場合は、数分待ってページを更新してから続行します。
-
 1. **Microsoft Edge** で、 `https://purview.microsoft.com` に移動します。
 
 1. **[設定]** > **[インサイダー リスク管理]** を選択します。

@@ -89,7 +89,7 @@ lab:
 1. **[ポリシーの名前を設定する]** で、以下を入力します。
 
     - **名前**: `Sensitive Financial Data Retention`
-    - **説明**: `Makes the 'Sensitive Financial Records' label available to users in Exchange, SharePoint, and OneDrive.`
+    - **説明**: `Makes the 'Sensitive Financial Records' label available to users in Exchange, SharePoint, OneDrive, and Teams.`
 
 1. [**次へ**] を選択します。
 
