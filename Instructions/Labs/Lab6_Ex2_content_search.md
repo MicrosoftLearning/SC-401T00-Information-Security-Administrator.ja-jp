@@ -33,21 +33,21 @@ lab:
 
 1. 左側のサイドバーで、**[設定]**、**[役割とスコープ]**、**[役割グループ]** の順に選択します。
 
-1. **[Microsoft Purview ソリューションのロール グループ]** ページで、`eDiscovery` を検索し、**[電子情報開示マネージャー]** を選択します。
+1. **[Microsoft Purview ソリューションの役割グループ]** ページで、`eDiscovery` を検索し、**[eDiscovery Manager]** を選択します。
 
-1. **[電子情報開示マネージャー]** ポップアップ パネルで、**[編集]** を選択します。
+1. **[eDiscovery Manager]** ポップアップ パネルで、**[編集]** を選択します。
 
-1. **[Manage eDiscovery Manager] (電子情報開示マネージャーの管理)** ページで、**[ユーザーの選択]** を選択します。
+1. **[電子情報開示マネージャーの管理]** ページで、**[ユーザーの選択]** を選択します。
 
 1. **[ユーザーの選択]** ポップアップ ページで、"`Joni`" を検索し、**[Joni Sherman]** のチェック ボックスをオンにします。 パネルの下部にある **[選択]** ボタンを選択します。
 
 1. **[電子情報開示マネージャーの管理]** ページで、**[次へ]** を選択します。
 
-1. **[Manage eDiscovery Administrator] (電子情報開示管理者の管理)** ページで、**[次へ]** を選択します。
+1. **[電子情報開示管理者の管理]** ページで、**[次へ]** を選択します。
 
 1. **[役割グループを確認して完了]** ページで、 **[保存]** を選択します。
 
-1. **[ロール グループが正常に更新されました]** ページで、**[完了]** を選択します。
+1. **[役割グループを正常に更新しました]** ページで、**[完了]** を選択します。
 
 1. ウィンドウの右上隅の **MA** アイコンを選択して MOD 管理者アカウントからサインアウトし、**[サインアウト]** を選択します。
 
@@ -63,20 +63,20 @@ Joni Sherman に電子情報開示アクセス許可を割り当てて、調査�
 
    ![電子情報開示で検索を作成する場所を示すスクリーンショット。](../Media/ediscovery-create-search.png)
 
-1. **[詳細を入力して開始する]** ダイアログで、次のように入力します。
+1. **[新しい検索]** ダイアログで、次のように入力します。
 
-   - **サポート案件名**: `Financial Data Exposure Review`
+   - **ケース名**: `Financial Data Exposure Review`
    - **検索名**: `Financial Data Leak Investigation`
-   - **サポート案件の説明:**: `Case opened to support security investigation efforts by identifying potential exposure of sensitive financial terms in Microsoft 365 content.`
+   - **ケースの説明:**: `Case opened to support security investigation efforts by identifying potential exposure of sensitive financial terms in Microsoft 365 content.`
    - **検索の説明**: `Search targets common high-risk financial keywords to support data security monitoring and policy validation.`
 
 1. **[作成]** を選択して、検索を作成します。
 
-1. **[財務データ漏洩調査]** ページの **[データ ソース]** で、**+** (プラス記号)、**[データ ソースの追加]** の順に選択します。
+1. **[Financial Data Leak Investigation]** ページの **[データ ソース]** で、**+** (プラス記号)、**[データ ソースの追加]** の順に選択します。
 
    ![コンテンツ検索で [データ ソースの追加] を示すスクリーンショット。](../Media/content-search-data-sources.png)
 
-1. **[ソースの検索]** ポップアップで、**[財務チーム]** グループを選択してから、**[保存して閉じる]** を選択します。
+1. **[ソースの検索]** ポップアップで、**[Finance team]** グループを選択してから、**[保存して閉じる]** を選択します。
 
 1. **[条件ビルダー]** ウィンドウで、キーワードに「`bank account`」と「`credit card`」を追加してから、**[クエリの実行]** を選択します。
 
