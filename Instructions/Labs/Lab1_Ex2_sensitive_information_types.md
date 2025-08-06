@@ -245,7 +245,7 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. ダウンロードが完了したら、Microsoft Edge ブラウザー ウィンドウで **[ファイルを開く]** を選択して、**Microsoft 完全データ一致アップロード エージェント セットアップ** ウィザードを開きます。
 
-1. **Welcome to the Microsoft Exact Data Match Upload Agent Setup Wizar** で、**[Next]** を選択します。
+1. **Welcome to the Microsoft Exact Data Match Upload Agent Setup Wizard** で、**[Next]** を選択します。
 
 1. **[End-User License Agreement]** ページで **[I accept the terms in the License Agreement]** を選択し、**[Next]** を選択します。
 
