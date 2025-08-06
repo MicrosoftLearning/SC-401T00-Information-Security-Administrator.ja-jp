@@ -67,7 +67,7 @@ Joni Sherman に電子情報開示アクセス許可を割り当てて、調査�
 
    - **ケース名**: `Financial Data Exposure Review`
    - **検索名**: `Financial Data Leak Investigation`
-   - **ケースの説明:**: `Case opened to support security investigation efforts by identifying potential exposure of sensitive financial terms in Microsoft 365 content.`
+   - **ケースの説明**: `Case opened to support security investigation efforts by identifying potential exposure of sensitive financial terms in Microsoft 365 content.`
    - **検索の説明**: `Search targets common high-risk financial keywords to support data security monitoring and policy validation.`
 
 1. **[作成]** を選択して、検索を作成します。
