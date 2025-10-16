@@ -138,6 +138,14 @@ Teams メッセージと共にメールをスキャンするようにポリシ�
 
 1. タスク バーにある **[開始]** ボタンを右クリックして管理者特権の PowerShell ウィンドウを開き、**[ターミナル (管理者)]** を選択します。
 
+1. ターミナル ウィンドウで**モジュールのインストール** コマンドレットを実行して、最新の **Exchange Online PowerShell** モジュール バージョンをインストールします。
+
+    ```powershell
+    Install-Module ExchangeOnlineManagement
+    ```
+
+1. 信頼されていないレポジトリ セキュリティ ダイアログで、[はい] を示す **[Y]** を選択して確定し、**Enter** キーを押します。  この処理は、完了までに時間がかかる場合があります。
+
 1. **Connect-IPPSSession** コマンドレットを実行して、Security & Compliance PowerShell に接続します。
 
     ```powershell
