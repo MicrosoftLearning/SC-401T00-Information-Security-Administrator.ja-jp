@@ -26,7 +26,7 @@ lab:
 
 このタスクでは、Microsoft Purview 監査 ソリューションを使用して、DLP ポリシーとルールに関連する最近の監査イベントを検索します。
 
-1. Microsoft Edge で、`https://purview.microsoft.com` に移動し、Microsoft Purview ポータルに **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` としてログインします (ここで ZZZZZZ はラボ ホスティング プロバイダーから支給された一意のテナント ID です)。 Joni のパスワードは、前の演習で設定しました。
+1. Microsoft Edge で `https://purview.microsoft.com` に移動し、**Joni Sherman** (`JoniS@WWLxZZZZZZ.onmicrosoft.com`) として Microsoft Purview ポータルにサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
 
 1. Microsoft Purview で、**[ソリューション]** > **[監査]** の順に移動します。
 

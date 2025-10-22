@@ -43,7 +43,7 @@ In this task, you'll verify the correct Azure RMS functionality of your tenant.
     Connect-ExchangeOnline
     ```
 
-1. When the **Sign in** window is displayed, sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). You will use the password you reset Joni's to in a previous lab.
+1. When the **Sign in** window is displayed, sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). You will use the password you reset Joni's to in a previous lab.
 
 1. Run the **Get-IRMConfiguration** cmdlet to verify Azure RMS and IRM is activated in your tenant:
 
@@ -113,7 +113,7 @@ You must confirm that no social IDs dialog is displayed for external recipients 
 
 1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
-1. Navigate to **`https://outlook.office.com`** and log into Outlook on the web as `LynneR@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Lynne's password was set in a previous exercise.
+1. Navigate to **`https://outlook.office.com`** and log into Outlook on the web as `LynneR@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Lynne's password was set in a previous exercise.
 
 1. On the **Stay signed in?** dialog box, select the checkbox for **Don't show this again** then select **No**.
 
@@ -246,7 +246,7 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 このタスクでは、Exchange 管理センターを使用して、財務チーム グループのメンバーから送信されるすべてのメッセージに Microsoft Purview Message Encryption を適用するメール フロー ルールを作成します。
 
-1. **Microsoft Edge** で、`https://admin.exchange.microsoft.com` に移動し、JoniS@WWLxZZZZZZ.onmicrosoft.com としてサインインします (ZZZZZZ はご自身のテナント ID に置き換えてください)。
+1. **Microsoft Edge** で `https://admin.exchange.microsoft.com` に移動し、JoniS@WWLxZZZZZZ.onmicrosoft.com としてサインインします (この ZZZZZZ は、自分専用のテナント プレフィックスに置き換えてください)。
 
 1. 左側のナビゲーション ウィンドウで **[メール フロー]** を展開し、**[ルール]** を選択します。
 
@@ -336,7 +336,7 @@ Microsoft Purview Message Encryption を使用して財務部門から送信さ�
 
 1. InPrivate ウィンドウで **Microsoft Edge** を開くには、タスク バーから Microsoft Edge を右クリックし、**[新しい InPrivate ウィンドウ]** を選択します。
 
-1. **`https://outlook.office.com`** に移動し、Outlook on the web に `LynneR@WWLxZZZZZZ.onmicrosoft.com` としてログインします (ZZZZZZ はラボ ホスティング プロバイダーから支給された固有のテナント ID)。 Lynne のパスワードは、前の演習で設定しました。
+1. **`https://outlook.office.com`** に移動し、`LynneR@WWLxZZZZZZ.onmicrosoft.com` として Outlook on the web にログインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
 
 1. **[サインインの状態を維持しますか?]** ダイアログボックスで、**[今後、このメッセージを表示しない]** チェックボックスをオンにして、**[いいえ]** を選択します。
 

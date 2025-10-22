@@ -21,14 +21,18 @@ lab:
 1. Microsoft Purview ポータルで監査を有効にする  
 1. デバイスのオンボードを有効にする  
 1. インサイダー リスク分析とデータ共有を有効にする  
-1. ラボ演習のユーザー パスワードを設定する  
 1. Microsoft Defender XDR を初期化する
+1. Microsoft Entra で多要素認証を構成する
 
 ## タスク 1 - Microsoft Purview ポータルで監査を有効にする
 
 このタスクでは、Microsoft Purview ポータルで監査を有効にして、ポータル アクティビティを監視します。
 
-1. Client 1 VM (SC-401-CL1) に **SC-401-CL1\admin** アカウントでログインし、Microsoft 365 には MOD 管理者アカウントでログインします。
+1. **管理者**アカウントを使用して Client 1 VM (SC-401-CL1) にログインします。
+
+1. Microsoft Edge を開きます。
+
+1. **Microsoft Edge** で、`https://purview.microsoft.com` に移動し、**MOD 管理者**である `admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
 
 1. Microsoft Edge で、Microsoft Purview ポータル `https://purview.microsoft.com` にアクセスして、ログインします。
 
@@ -44,61 +48,57 @@ lab:
 
 1. このオプションを選択すると、このページに青いバーが表示されなくなるはずです。
 
-<!----- PowerShell instructions
-
-1. Open an elevated Terminal window by selecting the Windows button with the right mouse button and then select **Terminal (Admin)**.
-
-1. Run the **Install Module** cmdlet in the terminal window to install the latest **Exchange Online PowerShell** module version:
-
-    ```powershell
-    Install-Module ExchangeOnlineManagement
-    ```
-
-1. Confirm the NuGet provider prompt by typing **Y** for Yes and press **Enter**.
-
-1. Confirm the Untrusted repository security dialog with **Y** for Yes and press **Enter**.  This process may take some time to complete.
-
-1. Run the **Set-ExecutionPolicy** cmdlet to change your execution policy and press **Enter**
-
-    ```powershell
-    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-    ```
-
-1. Close the PowerShell window.
-
-1. Open a regular (non-elevated) PowerShell window by right-clicking the Windows button and selecting **Terminal**.
-
-1. Run the **Connect-ExchangeOnline** cmdlet to use the Exchange Online PowerShell module and connect to your tenant:
-
-    ```powershell
-    Connect-ExchangeOnline
-    ```
-
-1. When the **Sign in** window is displayed, sign in as `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
-
-1. To check if Audit is enabled, run the **Get-AdminAuditLogConfig** cmdlet:
-
-    ```powershell
-    Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
-    ```
-
-1. If _UnifiedAuditLogIngestionEnabled_ returns false, then Audit is disabled.
-
-1. To enable the Audit log, run the **Set-AdminAuditLogConfig** cmdlet and set the **UnifiedAuditLogIngestionEnabled** to _true_:
-
-    ```powershell
-    Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
-    ```
-
-1. To verify that Audit is enabled, run the **Get-AdminAuditLogConfig** cmdlet again:
-
-    ```powershell
-    Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
-    ```
-
-1. _UnifiedAuditLogIngestionEnabled_ should return _true_ to let you know Audit is enabled.
-
--->
+    >[!Note] **注:[監査] ボタンでログが有効にならない場合**
+    >
+    >一部のテナントでは、**[ユーザーと管理者のアクティビティの記録を開始する]** を選択しても監査が有効にならないことがあります。  
+    >
+    >このような場合は、代わりに PowerShell を使用して監査を有効にすることができます。
+    >
+    >1. Windows ボタンを右クリックし、**[ターミナル (管理者)]** を選択して、管理者特権のターミナル ウィンドウを開きます。  
+    >
+    >1. 最新の **Exchange Online PowerShell** モジュールをインストールします。
+    >
+    >     ```powershell
+    >     Install-Module ExchangeOnlineManagement
+    >     ```
+    >
+    >     すべてのプロンプトに対して「**Y**」(Yes を示します) と入力し、**Enter** キーを押します。
+    >
+    >1. 次のコマンドを実行して、実行ポリシーを変更します。
+    >
+    >     ```powershell
+    >     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    >     ```
+    >
+    >1. 管理者特権のターミナル ウィンドウを閉じて、通常の PowerShell セッションを開きます。
+    >
+    >1. Exchange Online に接続します。
+    >
+    >     ```powershell
+    >     Connect-ExchangeOnline
+    >     ```
+    >
+    >    `admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
+    >
+    >1. [監査] が有効になっているかどうかを確認します。
+    >
+    >     ```powershell
+    >     Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
+    >     ```
+    >
+    >    **_False_** が返された場合は、[監査] を有効にします。
+    >
+    >     ```powershell
+    >     Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
+    >     ```
+    >
+    >1. 有効になっていることを確認します。
+    >
+    >     ```powershell
+    >     Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
+    >     ```
+    >
+    >    [監査] が有効になると、このコマンドにより **_True_** が返されます。
 
 Microsoft 365 で監査を正常に有効にしました。
 
@@ -142,49 +142,56 @@ Microsoft 365 で監査を正常に有効にしました。
 
 インサイダー リスク管理の分析とデータ共有を有効にしました。
 
-## タスク 4 - ラボ演習のユーザー パスワードを設定する
+<!---
 
-このタスクでは、ラボに必要なユーザー アカウントのパスワードを設定します。
+Removing this task in favor of using lab passwords
 
-1. Client 1 VM (SC-401-CL1) には引き続き **SC-401-CL1\admin** アカウントでログインし、Microsoft 365 には MOD 管理者アカウントでログインしている必要があります。
+## Task 4 - Set user passwords for lab exercises
 
-1. **Microsoft Edge** を開き、**`https://admin.microsoft.com`** にアクセスし、Microsoft 365 管理センターに MOD 管理者 `admin@WWLxZZZZZZ.onmicrosoft.com` としてログインします (ここで ZZZZZZ はラボ ホスティング プロバイダーから支給された一意のテナント ID です)。
+In this task, you'll set passwords for the user accounts needed for the labs.
 
-> [!note] **注**: 一部のテナントでは、サインイン時にポータルの MFA 適用に関するメッセージが表示される場合があります。 このメッセージが表示される場合:
-> - **[MFA の延期]** を選択して、MFA のセットアップを一時的に遅らせます。
->
->   ![MFA を延期するオプションを示すスクリーンショット。](../Media/postpone-mfa.png)
-> - **[延期の確認]** を選択します。
->
-> - **[MFA を使用せずにサインインを続行]** を選択して管理センターにアクセスします。
->
-> この結果、テナントの MFA 適用が延期され、ラボを進めることができます。
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft 365.
 
-1. 左側のナビゲーション ウィンドウで **[ユーザー]** を展開し、**[アクティブ ユーザー]** を選びます。
+1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
-1. **[Joni Sherman]**、**[Lynne Robbins]**、および **[Megan Bowen]** の左側にあるチェックボックスをオンにします。
+    > [!Note] **Note: Skip MFA for the Microsoft 365 Admin center**
+    >
+    > In some tenants, you might see a Portal MFA Enforcement prompt when signing in. If this prompt appears:
+    >
+    > - Select **Skip for now** to temporarily delay MFA setup.
+    >
+    >   ![Screenshot showing the option to postpone MFA.](../Media/postpone-mfa.png)
+    >
+    > - On the **Let us know why you're skipping MFA** dialogue, select any justification, then select **Send and skip**.
+    >
+    > This postpones MFA enforcement in the Microsoft 365 Admin center for the tenant and allows you to proceed with the lab.
 
-   これらのアカウントは、ラボ演習を終了するまで使用します。
+1. On the left navigation pane, expand **Users** then select **Active users**.
 
-   ![リセットする必要があるユーザー アカウントを示すスクリーンショット。](../Media/user-accounts.png)
+1. Select the checkbox to the left of **Joni Sherman**, **Lynne Robbins**, and **Megan Bowen**.
 
-1. 上部のナビゲーションから **[パスワードのリセット]** ボタンを選択し、3 つのパスワードをすべてリセットします。
+   These accounts will be used throughout the lab exercises.
 
-   ![Microsoft 365 管理センターの [パスワードのリセット] ボタンを示すスクリーンショット。](../Media/reset-password-button.png)
+   ![Screenshot showing user accounts that need to be reset.](../Media/user-accounts.png)
 
-1. 右側の **[パスワードのリセット]** ポップアップ ページで、両方のチェックボックスがオフになっていることを確認します。
+1. Select the **Reset password** button from the top navigation to reset all three passwords.
 
-   この結果、演習に使用する 3 人のユーザーのパスワードを選択できるようになり、最初にサインインするときにこれらのパスワードをリセットする必要がなくなります。
+   ![Screenshot showing the Reset password button in the Microsoft 365 admin center.](../Media/reset-password-button.png)
 
-1. "**パスワード**" フィールドに、今後の演習で使用するユーザー パスワードをリセットするための覚えやすいパスワードを入力します。
+1. In the **Reset Password** flyout page on the right, ensure that both checkboxes are deselected.
 
-1. **[パスワードのリセット]** ポップアップ ページの下部で、**[パスワードのリセット]** ボタンを選択します。
+   This will ensure that you can select a password for the three users being used for exercises, and that these passwords won't need to be reset when you first sign in.
 
-1. **[パスワードがリセットされました]** ページに、リセットされた 3 つのユーザー アカウントが表示されているはずです。 このポップアップ ページの下部にある **[閉じる]** を選択します。
+1. In the **Password** field, enter a password you can remember to reset the user passwords to be used in future exercises.
 
-ラボ演習のパスワードが正常にリセットされました。
+1. At the bottom of the **Reset password** flyout page, select the **Reset password** button.
 
-## タスク 5 - Microsoft Defender XDR を初期化する
+1. On the **Passwords have been reset** page, you should see the three user accounts that have been reset. At the bottom of this flyout page, select **Close**.
+
+You have successfully reset passwords for lab exercises.
+-->
+
+## タスク 4 - Microsoft Defender XDR を初期化する
 
 このタスクでは、Microsoft Defender を開き、Microsoft Defender XDR の初期化が完了するまで待機します。
 
@@ -194,7 +201,9 @@ Microsoft 365 で監査を正常に有効にしました。
 
 1. ナビゲーション ウィンドウで、**[調査と対応]** > **[インシデントとアラート]** > **[インシデント]** を選択します。
 
-> [!note] **注**: ラボ テナントによっては、Microsoft Defender XDR の初期化画面が表示される場合と表示されない場合があります。 表示された場合は、バックグラウンドで実行されている間に、他のタスクを進めることができます。
+    > [!Note] **注:Microsoft Defender XDR を初期化する**
+    >
+    > ラボ テナントによっては、Microsoft Defender XDR の初期化画面が表示される場合と表示されない場合があります。 表示された場合は、バックグラウンドで実行されている間に、他のタスクを進めることができます。
 
 1. Microsoft Defender XDR が準備中であることを示すメッセージが表示されます。 このプロセスは自動的に実行され、数分かかる場合があります。
 
@@ -202,7 +211,7 @@ Microsoft 365 で監査を正常に有効にしました。
 
 Microsoft Defender XDR を初期化しています。 セットアップが完了するまで、他のタスクを続行できます。
 
-## タスク 6 - Microsoft Entra で多要素認証を構成する
+## タスク 5 - Microsoft Entra で多要素認証を構成する
 
 このタスクでは、管理者アカウントの多要素認証 (MFA) を構成して、Microsoft Entra やその他の Microsoft 365 サービスへのアクセスをセキュリティで保護します。
 

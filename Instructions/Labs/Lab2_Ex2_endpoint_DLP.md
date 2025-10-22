@@ -21,7 +21,7 @@ Contoso Ltd. で情報セキュリティ管理者として新しく採用され�
 
 1. **Client 2 VM (SC-401-CL2)** に **SC-401-cl2\admin** アカウントでログインします。
 
-1. Microsoft Edge を開き、**`https://purview.microsoft.com`** に移動して、**Joni Sherman** として Microsoft Purview ポータルにログインします。 `JoniS@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (ZZZZZZ はラボ ホスティング プロバイダーから支給された固有のテナント ID)。 Joni のパスワードは、前の演習で設定しました。
+1. Microsoft Edge を開き、**`https://purview.microsoft.com`** に移動して、**Joni Sherman** として Microsoft Purview ポータルにログインします。 `JoniS@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
 
 1. 左側のサイドバーで **[設定]** を選択します。
 
@@ -47,7 +47,7 @@ Contoso Ltd. で情報セキュリティ管理者として新しく採用され�
 
 1. **[職場または学校アカウントを追加する]** の **[職場または学校にアクセスする]** ウィンドウで **[接続]** を選択します。
 
-1. **[職場または学校アカウントのセットアップ]** ダイアログで、**[このデバイスを Microsoft Entra ID に参加させる]** リンクを選択し、**Joni Sherman**`JoniS@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (ZZZZZZ はラボ ホスティング プロバイダーから支給された固有のテナント ID)。 Joni のパスワードは、前の演習で設定しました。
+1. **[職場または学校アカウントのセットアップ]** ダイアログで、**[このデバイスを Microsoft Entra ID に参加させる]** リンクを選択し、**Joni Sherman** (`JoniS@WWLxZZZZZZ.onmicrosoft.com`) としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
 
 1. **[これがあなたの組織であることを確認してください]** ダイアログで、テナントの URL を確認し、**[参加する]** を選択します。  
 

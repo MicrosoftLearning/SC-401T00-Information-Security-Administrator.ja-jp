@@ -33,7 +33,9 @@ lab:
 
 1. **SC-401-cl1\admin** アカウントで Client 1 VM (SC-401-CL1) に ログインします。
 
-1. Microsoft Edge で、**`https://purview.microsoft.com`** に移動し、Microsoft Purview ポータルに MOD 管理者 `admin@WWLxZZZZZZ.onmicrosoft.com` としてログインします (ここで ZZZZZZ はラボ ホスティング プロバイダーから支給された一意のテナント ID です)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
+1. InPrivate ウィンドウで **Microsoft Edge** を開くには、タスク バーから Microsoft Edge を右クリックし、**[新しい InPrivate ウィンドウ]** を選択します。
+
+1. **`https://purview.microsoft.com`** に移動し、MOD 管理者である `admin@WWLxZZZZZZ.onmicrosoft.com` として Microsoft Purview ポータルにサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
 
 1. **[設定]** > **[役割とスコープ]** > **[役割グループ]** を選択します。
 
@@ -53,7 +55,7 @@ lab:
 
 1. 役割グループに Joni を正常に追加したら、**[役割グループが正常に更新されました]** ページで **[完了]** を選択します。
 
-1. ウィンドウの右上隅の MA アイコンを選択してから、**[サインアウト]** を選択し、**MOD 管理者**アカウントからサインアウトします。
+1. InPrivate ウィンドウを閉じます。
 
 Microsoft Purview ポータルでインサイダー リスク管理を操作するために必要なアクセス許可を Joni に割り当てました。
 
@@ -61,7 +63,7 @@ Microsoft Purview ポータルでインサイダー リスク管理を操作す�
 
 インサイダー リスク ポリシーを作成する前に、検出に必要なインジケーターをオンにします。 これらのインジケーターは、システムが検出する危険なアクティビティの種類を定義します。
 
-1. **Microsoft Edge** で、**`https://purview.microsoft.com`** に移動し、Microsoft Purview ポータルに `JoniS@WWLxZZZZZZ.onmicrosoft.com` としてログインします (ここで ZZZZZZ はラボ ホスティング プロバイダーから支給された一意のテナント ID です)。
+1. **Microsoft Edge** で **`https://purview.microsoft.com`** に移動し、`JoniS@WWLxZZZZZZ.onmicrosoft.com` として Microsoft Purview ポータルにサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
 
 1. **[設定]** > **[インサイダー リスク管理]** を選択します。
 

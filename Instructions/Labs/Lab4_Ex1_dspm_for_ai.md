@@ -29,7 +29,7 @@ AI アシスタントによるデータ損失のリスクを軽減するには�
 
 1. **SC-401-cl1\admin** アカウントで Client 1 VM (SC-401-CL1) に ログインします。
 
-1. **Microsoft Edge** で、**`https://purview.microsoft.com`** に移動して **Joni Sherman**`JoniS@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (ここで ZZZZZZ はラボ ホスティング プロバイダーから支給された一意のテナント ID です)。
+1. **Microsoft Edge** で **`https://purview.microsoft.com`** に移動し、**Joni Sherman** (`JoniS@WWLxZZZZZZ.onmicrosoft.com`) としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
 
 1. Microsoft Purview で、**[ソリューション]**、**[AI 用 DSPM]**、**[推奨事項]** の順に選択して AI 用 DSPM に移動します。
 

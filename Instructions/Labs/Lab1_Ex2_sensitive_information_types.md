@@ -25,7 +25,7 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. 引き続き Client 1 VM (SC-401-CL1) に **SC-401-CL1\admin** アカウントでログインしている必要があります。
 
-1. **Microsoft Edge** で、 **`https://purview.microsoft.com`** に移動し、Microsoft Purview ポータルに `JoniS@WWLxZZZZZZ.onmicrosoft.com` としてログインします (ZZZZZZ はラボ ホスティング プロバイダーから支給された固有のテナント ID)。 Joni のパスワードは、前の演習で設定しました。
+1. **Microsoft Edge** で **`https://purview.microsoft.com`** に移動し、`JoniS@WWLxZZZZZZ.onmicrosoft.com` として Microsoft Purview ポータルにログインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
 
 1. 左サイドバーで **[ソリューション]** を選択し、**[Microsoft Information Protection]** を選択します。
 
@@ -108,8 +108,6 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. **[保存]** を選択し、**[完了]** を選択して機密情報の種類を更新します。
 
-1. 右上にある Joni Sherman のプロファイル画像を選択し、Joni のアカウントからサイン アウトします。 **[サインアウト]** を選択し、ブラウザー ウィンドウを閉じます。
-
 カスタム SIT の秘密度を高めるために信頼レベルが正常に低下しました。これにより、部分的に一致するコンテンツを含むドキュメントにフラグが設定される可能性が高くなります。
 
 ## タスク 3 – セキュリティ グループを作成してロールを割り当て、EDM 分類子を作成する
@@ -118,9 +116,9 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. 引き続き Client 1 VM (SC-401-CL1) に **SC-401-CL1\admin** アカウントでログインしている必要があります。
 
-1. **Microsoft Edge** を開き、 **`https://admin.microsoft.com`** に移動します。
+1. InPrivate ウィンドウで **Microsoft Edge** を開くには、タスク バーから Microsoft Edge を右クリックし、**[新しい InPrivate ウィンドウ]** を選択します。
 
-1. **[アカウントを選択する]** ページが表示されたら、**[別のアカウントを使用する]** を選択し、**MOD 管理者** `admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (ZZZZZZ はラボ ホスティング プロバイダーから支給された固有のテナント ID)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
+1. **`https://admin.microsoft.com`** に移動し、**MOD 管理者**である `admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
 
 1. 左ペインから、**[チームとグループ]** を展開し、**[アクティブなチームとグループ]** を選択します。
 
@@ -151,7 +149,7 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. **Joni Sherman** が **メンバー** の下に表示されていることを確認し、ポップアップ パネルの右上にある **[x]** を選択してポップアップ パネルを閉じます。
 
-1. ウィンドウの右上の MA アイコンを選択し、**[サインアウト]** を選択して、MOD 管理者アカウントからサインアウトし、ブラウザー ウィンドウを閉じます。
+1. InPrivate ウィンドウを閉じます。
 
 **EDM_DataUploaders グループ**を正常に作成し、Joni アクセスを割り当てて EDM 分類子を作成しました。
 
@@ -159,9 +157,9 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 このタスクでは、従業員データのデータベース スキーマで完全データ一致 (EDM) ベースの分類を作成します。
 
-1. **Microsoft Edge** を開いて、Microsoft Purview ポータル (`https://purview.microsoft.com`) に移動します。
+1. Joni Sherman としてサインインしている Microsoft Edge ウィンドウに戻ります。
 
-1. **[アカウントを選択する]** ページが表示されたら、**[Joni Sherman]** を選択してサインインします。
+1. **Microsoft Edge** では、Joni Sherman として Microsoft Purview にログインした状態が維持されているはずです。
 
 1. 左側のサイドバーから **[ソリューション]** > **[Microsoft Information Protection]** を選択して、**Information Protection** に移動します。
 
@@ -289,7 +287,7 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
     .\EdmUploadAgent.exe /Authorize
     ```
 
-1. **[アカウントを選択する]** ウィンドウが表示されたら、`JoniS@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (ZZZZZZ はラボ ホスティング プロバイダーから支給された固有のテナント ID)。 Joni のパスワードは、前の演習で設定しました。
+1. **[アカウントの選択]** ウィンドウが表示されたら、`JoniS@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 Joni のパスワードは、前の演習で設定しました。
 
 1. ターミナル ウインドウに戻り、以下のスクリプトを PowerShell で実行して、EDB ベースの分類による秘密情報の種類のデータベース スキーマの定義をダウンロードします: **DataStoreName** の場合、前のタスクから保存したスキーマ名を使用します。
 
