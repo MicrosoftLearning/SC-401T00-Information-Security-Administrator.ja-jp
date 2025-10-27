@@ -27,9 +27,9 @@ lab:
 
 1. **SC-401-CL1\admin** アカウントで Client 1 VM (SC-401-CL1) にログインします。
 
-1. Joni としてサインインしている場合は、サインアウトしてすべてのブラウザー ウィンドウを閉じてください。
+1. InPrivate ウィンドウで **Microsoft Edge** を開くには、タスク バーから Microsoft Edge を右クリックし、**[新しい InPrivate ウィンドウ]** を選択します。
 
-1. **Microsoft Edge** で、 **`https://purview.microsoft.com`** に移動し、Microsoft Purview ポータルに **MOD 管理者** `admin@WWLxZZZZZZ.onmicrosoft.com` としてログインします (ZZZZZZ はラボ ホスティング プロバイダーから支給された固有のテナント ID)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
+1. **`https://purview.microsoft.com`** に移動し、**MOD 管理者**である `admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
 
 1. 左側のサイドバーで、**[設定]**、**[役割とスコープ]**、**[役割グループ]** の順に選択します。
 
@@ -49,13 +49,13 @@ lab:
 
 1. **[役割グループを正常に更新しました]** ページで、**[完了]** を選択します。
 
-1. ウィンドウの右上隅の **MA** アイコンを選択して MOD 管理者アカウントからサインアウトし、**[サインアウト]** を選択します。
+1. InPrivate ウィンドウを閉じます。
 
 Joni Sherman に電子情報開示アクセス許可を割り当てて、調査の一環として機密性の高いコンテンツを検索できるようにします。
 
 ## タスク 2 - 機密性の高い財務用語を使用してコンテンツを検索する
 
-1. Microsoft Edge で、`https://purview.microsoft.com` に移動し、Microsoft Purview ポータルに **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` としてログインします (ここで ZZZZZZ はラボ ホスティング プロバイダーから支給された一意のテナント ID です)。 Joni のパスワードは、前の演習で設定しました。
+1. Joni Sherman としてサインインしている Microsoft Edge ウィンドウに戻ります。
 
 1. Microsoft Purview で、**[ソリューション]**、**[電子情報開示]** の順に移動します。
 

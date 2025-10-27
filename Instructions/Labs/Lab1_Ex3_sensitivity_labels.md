@@ -17,7 +17,7 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 1. 自動ラベル付けを構成する
 1. 機密性の高いコンテンツの DKE ラベルを作成して発行する
 1. Microsoft Purview と Defender for Cloud Apps との統合を有効にする
-1. 外部共有ファイルに自動ラベル付けをするファイル ポリシーを作成する
+1. 外部共有ファイルにラベルを付けるファイル ポリシーを作成する
 
 ## タスク 1 - 秘密度ラベルのサポートを有効にする
 
@@ -29,7 +29,7 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. 左側のナビゲーションで、**[設定]** > **[Microsoft Information Protection]** を選択します。
 
-1. **[Microsoft Information Protection] の設定**で、**[秘密度ラベルが付いたファイルの共同編集]** タブが表示されていることを確認します。
+1. **[Information Protection の設定]** で、**[秘密度ラベルを持つファイルの 共同編集]** タブが表示されていることを確認します。
 
 1. **[秘密度ラベルのあるファイルの共同編集を有効にする]** チェック ボックスをオンにします。
 
@@ -107,7 +107,7 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
    - **コンテンツに対するユーザーのアクセス許可の期限**:許可しない
    - **オフライン アクセスを許可する**:数日のみ
    - **ユーザーがコンテンツへオフラインでアクセスできる日数**:15
-   - **[アクセス許可の割り当て]** リンクを選択します。 **[アクセス許可の割り当て]** ポップアップ ページで、**[+ 任意の認証済みユーザーを追加]** を選択し、**[保存]** を選択してこの設定を適用します。
+   - **[アクセス許可の割り当て]** リンクを選択します。 **[アクセス許可の割り当て]** ポップアップ パネルで **[+ 認証されたユーザーの追加]** を選択し、**[保存]** を選択してこの設定を適用します。
 
 1. **[アクセスの制御]** ページで、**[次へ]** を選択します。
 
@@ -135,7 +135,7 @@ HR ドキュメントに暗号化とコンテンツ マーキングを適用す�
 
 ## タスク 4: 秘密度ラベルを発行する
 
-次に、内部と人事の秘密度ラベルを発行します。これにより、発行された秘密度ラベルを人事ユーザーが人事ドキュメントに適用できるようになります。
+次に、社内および人事の秘密度ラベルを発行して、公開された秘密度ラベルを人事ユーザーが人事ドキュメントに適用できるようにします。
 
 1. Client 1 VM (SC-401-CL1) には **SC-401-cl1\admin** アカウントでログインし、Microsoft Purview には **Joni Sherman** としてログインしておく必要があります。
 
@@ -393,9 +393,64 @@ HR ドキュメントに暗号化とコンテンツ マーキングを適用す�
 
 Defender for Cloud Apps でファイルの秘密度ラベルがスキャンされ、ファイルが監視されるようになったことで、ファイル ポリシーによりガバナンス アクションの評価と適用ができるようになりました。
 
-## タスク 8 - 外部共有ファイルに自動ラベルを付けるファイル ポリシーを作成する
+<!---
 
-ラベルのスキャンが有効になったので、組織外で共有されている Mark 8 Project フォルダーのファイルに **"Highly Confidential - Project - Falcon"** という秘密度ラベルを適用するファイル ポリシーを作成します。 このポリシーは、意図しない露出から機密データが保護されるため、DLP として分類されます。
+NOTE - Reworking task 8 due to tenant issue
+
+## Task 8 – Create a file policy to auto-label externally shared files
+
+Now that label scanning is enabled, you'll create a file policy that applies the **Highly Confidential - Project - Falcon** sensitivity label to files in the Mark 8 Project folders that are shared outside your organization. This policy is categorized as DLP because it protects sensitive data from unintended exposure.
+
+1. In **Microsoft Defender**, navigate to **Cloud apps** > **Policies** > **Policy management**.
+
+1. Select the **Information protection** tab, then select **Create policy** > **File policy**.
+
+    ![Screenshot showing where to navigate to create a file policy in Microsoft Defender.](../Media/file-policy-defender.png)
+
+1. On the **Create file policy** page, configure:
+
+   - **Policy name**: `Auto-label external sharing for Project Falcon files`
+
+   - **Policy severity**: **High**
+
+   - **Category**: **DLP**
+
+   - **Apply to**: **Selected folders**
+
+      - Select **Add folder(s)**, then search for `Project` in the **File name** field.
+
+      - Select the checkbox for the **Mark 8 Project Team Notebook** and **Mark 8 Project team** SharePoint folders.
+
+      - Select **Done** to close the **Select a folder** window.
+
+   - In the **Files matching all of the following section**:
+
+      - For the first filter, configure the dropdowns to: **Access level equals external**
+
+      - For the second filter, configure the dropdowns to: **Last modified after (date)** and use today's date
+
+          ![Screenshot showing the filter settings in Defender.](../Media/configure-file-policy-filter.png)
+
+   - Under **Governance actions**, expand **Microsoft OneDrive for Business**:
+
+      - Select the checkbox for **Apply sensitivity label**
+
+      - In the dropdown select **Highly Confidential-Project - Falcon**
+
+   - Repeat the same process for **Microsoft SharePoint Online**
+
+      - Select the checkbox for **Apply sensitivity label**
+
+      - Select **Highly Confidential-Project - Falcon** from the dropdown
+
+1. Select **Create** to finish creating the file policy.
+
+You've created a file policy that applies a highly confidential sensitivity label to externally shared files located in the Mark 8 Project folders in SharePoint and OneDrive. Once a matching file is detected, Defender for Cloud Apps will apply the label automatically.
+-->
+
+## タスク 8 - 外部共有ファイルにラベルを付けるファイル ポリシーを作成する
+
+このタスクでは、組織外で共有されているファイルに秘密度ラベルを自動的に適用するファイル ポリシーを作成します。 この種類のポリシーは、外部で共有されるファイルにラベルを付け、データ損失防止 (DLP) 戦略に従って管理することで、機密性の高いコンテンツを保護するのに役立ちます。
 
 1. **Microsoft Defender** で、**[クラウド アプリ]**、**[ポリシー]**、**[ポリシー管理]** の順に移動します。
 
@@ -405,19 +460,11 @@ Defender for Cloud Apps でファイルの秘密度ラベルがスキャンさ�
 
 1. **[ファイル ポリシーの作成]** ページで、次の構成を行います。
 
-   - **ポリシー名**: `Auto-label external sharing for Project Falcon files`
+   - **ポリシー名**: `Auto-label externally shared files`
 
    - **ポリシー重大度**: **高**
 
    - **カテゴリ**: **DLP**
-
-   - **適用先**: **選ばれたフォルダー**
-
-      - **[フォルダーの追加]** を選択し、**"ファイル名"** フィールドで「`Project`」を検索します。
-
-      - **Mark 8 Project Team Notebook** および **Mark 8 Project team** という SharePoint フォルダーのチェック ボックスをオンにします。
-
-      - **[完了]** を選択して、**[フォルダーの選択]** ウィンドウを閉じます。
 
    - **[次のすべてに一致するファイル] セクション**で、次を行います。
 
@@ -431,14 +478,14 @@ Defender for Cloud Apps でファイルの秘密度ラベルがスキャンさ�
 
       - **[秘密度ラベルの適用]** のチェック ボックスをオンにする
 
-      - ドロップダウンで **[Highly Confidential-Project - Falcon]** を選択します
+      - ドロップダウンから **[極秘 - 指定ユーザー]** を選択します。
 
    - **Microsoft SharePoint Online** に対して同じプロセスを繰り返す
 
       - **[秘密度ラベルの適用]** のチェック ボックスをオンにする
 
-      - ドロップダウンから **[Highly Confidential-Project - Falcon]** を選択します
+      - ドロップダウンから **[極秘 - 指定ユーザー]** を選択します
 
 1. **[作成]** を選択してファイル ポリシーの作成を完了します。
 
-これで、SharePoint と OneDrive の Mark 8 プロジェクト フォルダーにある外部共有されているファイルに極秘の秘密度ラベルを適用するファイル ポリシーが作成されました。 一致するファイルが検出されると、Defender for Cloud Apps によってラベルが自動的に適用されます。
+SharePoint と OneDrive 内の外部共有ファイルに機密性の高い秘密度ラベルを適用するファイル ポリシーを作成しました。 一致するファイルが検出されると、Defender for Cloud Apps によってラベルが自動的に適用され、外部共有ファイルに保護が適用されます。

@@ -26,9 +26,9 @@ lab:
 
 このタスクでは、発行された秘密度ラベルがユーザーに対して使用可能になっていて、Microsoft Word から直接適用できることを確認します。
 
-1. 引き続き Client 1 VM (SC-401-CL1) に **SC-401-cl1\admin** アカウントでログインし、Microsoft 365 には **Joni Sherman**`JoniS@WWLxZZZZZZ.onmicrosoft.com` としてログインしている必要があります (ここで ZZZZZZ はラボ ホスティング プロバイダーから支給された一意のテナント ID です)。 Joni のパスワードは、前の演習で設定しました。
+1. Client 1 VM (SC-401-CL1) には引き続き **SC-401-CL1\admin** アカウントとしてログインし、Microsoft 365 には **Joni Sherman** (`JoniS@WWLxZZZZZZ.onmicrosoft.com`) としてログインする必要があります (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
 
-1. Microsoft Edge で、`https://word.office.com` に移動し、Microsoft Office に **Joni Sherman**`JoniS@WWLxZZZZZZ.onmicrosoft.com` としてログインします (ここで ZZZZZZ はラボ ホスティング プロバイダーから支給された一意のテナント ID です)。 Joni のパスワードは、前の演習で設定しました。
+1. Microsoft Edge で、`https://word.office.com` に移動します。
 
 1. **[空白のドキュメント]** を選択します。
 

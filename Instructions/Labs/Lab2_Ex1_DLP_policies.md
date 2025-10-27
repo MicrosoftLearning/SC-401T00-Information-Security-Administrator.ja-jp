@@ -22,8 +22,8 @@ Contoso Ltd. で情報セキュリティ管理者として新しく採用され�
 1. PowerShell で DLP ポリシーを作成する
 1. シミュレーション モードでポリシーをアクティブ化する
 1. ポリシーの優先順位を修正する
-1. Microsoft 365 Defender でファイル検査を有効にする
-1. Microsoft 365 Defender のファイル ポリシーを作成する
+1. Microsoft Defender でファイル検査を有効にする
+1. Microsoft Defender のファイル ポリシーを作成する
 
 ## タスク 1: シミュレーション モードで DLP ポリシーを作成する
 
@@ -31,7 +31,7 @@ Contoso Ltd. で情報セキュリティ管理者として新しく採用され�
 
 1. **SC-401-CL1\admin** アカウントを使って Client 1 VM (SC-401-CL1) にログインします。
 
-1. **Microsoft Edge** で、 **`https://purview.microsoft.com`** に移動し、**Joni Sherman** として Microsoft Purview ポータルにログインします。 `JoniS@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (ZZZZZZ はラボ ホスティング プロバイダーから支給された固有のテナント ID)。 Joni のパスワードは、前の演習で設定しました。
+1. **Microsoft Edge** で、 **`https://purview.microsoft.com`** に移動し、**Joni Sherman** として Microsoft Purview ポータルにログインします。 `JoniS@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
 
 1. **[ソリューション]** > **[データ損失防止]** > **[ポリシー]** を選択します。
 
@@ -138,13 +138,21 @@ Teams メッセージと共にメールをスキャンするようにポリシ�
 
 1. タスク バーにある **[開始]** ボタンを右クリックして管理者特権の PowerShell ウィンドウを開き、**[ターミナル (管理者)]** を選択します。
 
+1. ターミナル ウィンドウで**モジュールのインストール** コマンドレットを実行して、最新の **Exchange Online PowerShell** モジュール バージョンをインストールします。
+
+    ```powershell
+    Install-Module ExchangeOnlineManagement
+    ```
+
+1. 信頼されていないレポジトリ セキュリティ ダイアログで、[はい] を示す **[Y]** を選択して確定し、**Enter** キーを押します。  この処理は、完了までに時間がかかる場合があります。
+
 1. **Connect-IPPSSession** コマンドレットを実行して、Security & Compliance PowerShell に接続します。
 
     ```powershell
     Connect-IPPSSession
     ```
 
-1. **[アカウントにサインイン]** ポップアップ ウィンドウで、**Joni Sherman**`JoniS@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (ここで ZZZZZZ はラボ ホスティング プロバイダーから支給された一意のテナント ID)。 Joni のパスワードは、前の演習で設定しました。
+1. **[アカウントにサインイン]** ポップアップ ウィンドウで **Joni Sherman** (`JoniS@WWLxZZZZZZ.onmicrosoft.com`) としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
 
 1. **New-DlpCompliancePolicy** コマンドレットを実行して、すべての Exchange メールボックスをスキャンする DLP ポリシーを作成します。
 
@@ -204,35 +212,37 @@ DLP ポリシーをシミュレーションでテストしたので、次にポ�
 
 1. **[データ損失防止]** ウィンドウで、 **[更新]** を選択し、[ポリシー] タブの **[順序]** の列で優先順位を確認します。
 
-1. 右上にある Joni のアイコンを選んでから **[サインアウト]** を選択し、そのアカウントからサインアウトします。
-
 EmployeeID DLP Policy が他のポリシーよりも優先されるように、ポリシーの優先順位を更新しました。
 
-## タスク 6 – Microsoft 365 Defender でファイル検査を有効にする
+## タスク 6 - Microsoft Defender でファイル検査を有効にする
 
 一部のファイル ポリシーでは、保護されたファイルの内容を検査するためにアクセス権が必要です。 このタスクでは、Microsoft Defender が OneDrive ファイルと SharePoint ファイルの内容について機密情報がないかスキャンするために必要なアクセス許可を付与します。
 
 1. 引き続き、**SC-401-CL1\admin** アカウントで Client 1 VM (SC-401-CL1) にログインし、Joni Sherman としてサインインしておく必要があります。
 
-1. **Microsoft Edge** で、`https://security.microsoft.com` に移動して Microsoft Defender に移動します。 **MOD 管理者**としてログインします。`admin@WWLxZZZZZZ.onmicrosoft.com` (ここで ZZZZZZ はラボ ホスティング プロバイダーから支給された一意のテナント ID です)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
+1. InPrivate ウィンドウで **Microsoft Edge** を開くには、タスク バーから Microsoft Edge を右クリックし、**[新しい InPrivate ウィンドウ]** を選択します。
+
+1. **`https://security.microsoft.com`** に移動して Microsoft Defender XDR にアクセスし、**MOD 管理者**である `admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
 
 1. 左側のサイドバーで、**[システム]** > **[設定]** を選択し、**[クラウド アプリ]** を選択します。
 
-1. **[クラウド アプリ]** ウィンドウ内の左側のペインで、**[Microsoft Information Protection]** セクションまで下にスクロールします。 **[保護されたファイルを検査]** で、**[アクセス許可を付与する]** を選択してファイル検査を有効にします。
+1. **[クラウド アプリ]** ウィンドウの左ペインで、**[情報保護]** セクションまで下にスクロールし、**[Microsoft Information Protection]** を選択します。
+
+1. **[保護されたファイルを検査]** で、**[アクセス許可を付与する]** を選択してファイル検査を有効にします。
 
 1. プロンプトに従って Microsoft Entra ID で必要なアクセス許可を与えると、Microsoft Defender for Cloud Apps でファイル検査が**アクティブ**であることが表示されます。
 
-1. 右上の **MA** アイコンを選択して MOD 管理者アカウントからサインアウトし、**[サインアウト]** を選択してブラウザー ウィンドウを閉じます。
+1. InPrivate ウィンドウを閉じます。
 
 Defender でファイル検査が有効になり、ファイル ポリシーで機密性の高いコンテンツをスキャンできるようになりました。
 
-## タスク 7 – Microsoft 365 Defender のファイル ポリシーを作成する
+## タスク 7 - Microsoft Defender のファイル ポリシーを作成する
 
 このタスクでは、OneDrive と SharePoint のクレジット カード番号を含むファイルを特定して検疫するファイル ポリシーを Microsoft Defender で作成します。
 
 1. 引き続き Client 1 VM (SC-401-CL1) に **SC-401-CL1\admin** アカウントでログインしている必要があります。
 
-1. **Microsoft Edge** を開き、**`https://security.microsoft.com`** に移動し、Microsoft Defender ポータルに **Joni Sherman**`JoniS@WWLxZZZZZZ.onmicrosoft.com` としてログインします (ZZZZZZ はラボ ホスティング プロバイダーから支給された固有のテナント ID)。 Joni のパスワードは、前の演習で設定しました。
+1. Joni Sherman としてサインインしている Microsoft Edge ウィンドウに戻ります。
 
 1. **Microsoft Defender** ポータルの左側のナビゲーションで、**[クラウド アプリ]** > **[ポリシー]** を選択し、**[ポリシー管理]** を選択します。
 
