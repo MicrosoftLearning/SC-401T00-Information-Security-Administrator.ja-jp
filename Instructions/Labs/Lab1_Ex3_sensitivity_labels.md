@@ -27,7 +27,7 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. **Microsoft Edge** を開き、`https://purview.microsoft.com` に移動します。
 
-1. 左側のナビゲーションで、**[設定]** > **[Microsoft Information Protection]** を選択します。
+1. 左側のナビゲーションで、**[設定]** >**[Microsoft Information Protection]** を選択します。
 
 1. **[Information Protection の設定]** で、**[秘密度ラベルを持つファイルの 共同編集]** タブが表示されていることを確認します。
 
@@ -41,9 +41,9 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 このタスクでは、内部コンテンツの親秘密度ラベルを作成します。 このラベルには基本設定が含まれており、部門固有のサブラベルの親ラベルとして機能します。
 
-1. 引き続き Client 1 VM (SC-401-CL1) に **SC-401-CL1\admin** アカウントでログインしている必要があります。
+1. 引き続き Client 1 VM (SC-401-CL1) に**SC-401-CL1\admin** アカウントでログインしている必要があります。
 
-1. **Microsoft Edge** で、 `https://purview.microsoft.com` に移動します。
+1. **Microsoft Edge** で、`https://purview.microsoft.com` に移動します。
 
 1. Microsoft Purview ポータルの左サイドバーで、**[ソリューション]** を選択してから、**[Microsoft Information Protection]** を選択します。
 
@@ -53,10 +53,10 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. **[新しい秘密度ラベル]** 構成が起動します。 **[このラベルの基本的な詳細を指定します]** で、次のように入力します。
 
-    - **名前**: `Internal`
-    - **表示名**: `Internal`
-    - **ユーザー向けの説明**: `Internal sensitivity label.`
-    - **管理者向けの説明**: `Internal sensitivity label for Contoso.`
+    - **名前**:`Internal`
+    - **表示名**:`Internal`
+    - **ユーザー向けの説明**:`Internal sensitivity label.`
+    - **管理者向けの説明**:`Internal sensitivity label for Contoso.`
 
 1. [**次へ**] を選択します。
 
@@ -64,7 +64,7 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. [**次へ**] を選択します。
 
-1. **[選択した項目の種類の保護設定を選択します]** ページで、 **[次へ]** を選択します。
+1. **[選択した項目の種類の保護設定を選択します]** ページで、**[次へ]** を選択します。
 
 1. **[ファイルとメールの自動ラベル付け]** ページで、**[次へ]** をクリックします。
 
@@ -80,16 +80,16 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 ベース ラベルが作成されたので、HR 関連ドキュメントのサブラベルを作成します。 このサブラベルには、人事部の内部データ処理プラクティスをサポートするための保護設定と目に見えるコンテンツ マーキングが含まれています。
 
-1. **[秘密度ラベル]** ページで、新しく作成した **Internal** 秘密度ラベルを見つけます。 横にある縦の省略記号 (**...**) を選択し、ドロップダウン メニューから **[+ サブラベルを作成]** を選択します。
+1. **[秘密度ラベル]** ページで、新しく作成した**Internal** 秘密度ラベルを見つけます。 横にある縦の省略記号 (**...**) を選択し、ドロップダウン メニューから **[+ サブラベルを作成]** を選択します。
 
     ![秘密度ラベルのサブラベルを作成するための [アクション] メニューを示すスクリーンショット。](../Media/create-sublabel-button.png)
 
 1. **[新しい秘密度ラベル]** ウィザードが起動します。 **[このラベルの基本的な詳細を指定します]** で、次のように入力します。
 
-   - **名前**: `Employee data (HR)`
-   - **表示名**: `Employee data (HR)`
-   - **ユーザー向けの説明**: `This HR label is the default label for all specified documents in the HR Department.`
-   - **管理者向けの説明**: `This label is created in consultation with Ms. Jones (Head of HR department). Contact her if you need to change the label settings.`
+   - **名前**:`Employee data (HR)`
+   - **表示名**:`Employee data (HR)`
+   - **ユーザー向けの説明**:`This HR label is the default label for all specified documents in the HR Department.`
+   - **管理者向けの説明**:`This label is created in consultation with Ms. Jones (Head of HR department). Contact her if you need to change the label settings.`
 
 1. [**次へ**] を選択します。
 
@@ -137,9 +137,9 @@ HR ドキュメントに暗号化とコンテンツ マーキングを適用す�
 
 次に、社内および人事の秘密度ラベルを発行して、公開された秘密度ラベルを人事ユーザーが人事ドキュメントに適用できるようにします。
 
-1. Client 1 VM (SC-401-CL1) には **SC-401-cl1\admin** アカウントでログインし、Microsoft Purview には **Joni Sherman** としてログインしておく必要があります。
+1. Client 1 VM (SC-401-CL1) には**SC-401-cl1\admin** アカウントでログインし、Microsoft Purview には**Joni Sherman** としてログインしておく必要があります。
 
-1. **Microsoft Edge** で、Microsoft Purview ポータルのタブがまだ開かれているはずです。 そうでない場合は、**`https://purview.microsoft.com`** > **[ソリューション]** > **[Microsoft Information Protection]** > **[秘密度ラベル]** に移動します。
+1. **Microsoft Edge** で、Microsoft Purview ポータルのタブがまだ開かれているはずです。 そうでない場合は、**`https://purview.microsoft.com`** >**[ソリューション]** >**[Microsoft Information Protection]** >**[秘密度ラベル]** に移動します。
 
 1. **[秘密度ラベル]** ページで **[ラベルを発行]** を選択します。
 
@@ -157,25 +157,25 @@ HR ドキュメントに暗号化とコンテンツ マーキングを適用す�
 
 1. **[ポリシー設定]** ページで **[次へ]** を選択します。
 
-1. **[ドキュメントの既定の設定]** で、 **[次へ]** を選択します。
+1. **[ドキュメントの既定の設定]** で、**[次へ]** を選択します。
 
-1. **[メールの既定の設定]** で、 **[次へ]** を選択します。
+1. **[メールの既定の設定]** で、**[次へ]** を選択します。
 
-1. **[会議と予定表イベントの既定の設定]** で、 **[次へ]** を選択します。
+1. **[会議と予定表イベントの既定の設定]** で、**[次へ]** を選択します。
 
 1. **[Fabric および Power BI コンテンツの既定の設定]** ページで、**[次へ]** を選択します。
 
 1. **[ポリシーの名前の設定] ページ**で、以下を入力します。
 
-   - **名前**: `Internal HR employee data`
+   - **名前**:`Internal HR employee data`
 
-   - **秘密度ラベル ポリシーの説明を入力してください**: `This HR label is to be applied to internal HR employee data.`
+   - **秘密度ラベル ポリシーの説明を入力してください**:`This HR label is to be applied to internal HR employee data.`
 
 1. [**次へ**] を選択します。
 
 1. **[確認と完了]** ページで、**[送信]** を選択します。
 
-1. **[新しいポリシーが作成されました]** ページで、 **[完了]** を選択して、ラベル ポリシーの発行を完了します。
+1. **[新しいポリシーが作成されました]** ページで、**[完了]** を選択して、ラベル ポリシーの発行を完了します。
 
 内部と人事の秘密度ラベルが正常に発行されました。 なお、変更内容がすべてのユーザーやサービスにレプリケートされるまで、最大で 24 時間かかることがあります。
 
@@ -183,9 +183,9 @@ HR ドキュメントに暗号化とコンテンツ マーキングを適用す�
 
 このタスクでは、財務データの秘密度ラベルを作成し、クレジット カード番号や銀行のルーティング情報など、特定の財務識別子を含むコンテンツに自動的に適用されるように構成します。
 
-1. 引き続き Client 1 VM (SC-401-CL1) に **SC-401-cl1\admin** アカウントでログインしている必要があります。
+1. 引き続き Client 1 VM (SC-401-CL1) に**SC-401-cl1\admin** アカウントでログインしている必要があります。
 
-1. **Microsoft Edge** で、 `https://purview.microsoft.com` に移動し、**Joni Sherman** として Microsoft Purview ポータルにログインします。
+1. **Microsoft Edge** で、`https://purview.microsoft.com` に移動し、**Joni Sherman** として Microsoft Purview ポータルにログインします。
 
 1. Microsoft Purview ポータルで、**[ソリューション]**、**[Microsoft Information Protection]**、**[秘密度ラベル]** の順に移動します。
 
@@ -206,13 +206,13 @@ HR ドキュメントに暗号化とコンテンツ マーキングを適用す�
 
 1. [**次へ**] を選択します。
 
-1. **[選択した項目の種類の保護設定を選択します]** ページで、 **[次へ]** を選択します。
+1. **[選択した項目の種類の保護設定を選択します]** ページで、**[次へ]** を選択します。
 
 1. **[ファイルとメールの自動ラベル付け]** ページで、**[ファイルとメールの自動ラベル付け]** を有効に設定します。
 
-1. **[これらの条件に一致するコンテンツを検出する]** セクションで、**[+条件の追加]** >  を選択し、**[コンテンツに含まれている]** を選択します。
+1. **[これらの条件に一致するコンテンツを検出する]** セクションで、**[+条件の追加]** > を選択し、**[コンテンツに含まれている]** を選択します。
 
-1. **[コンテンツに含まれている]** セクションで、**[追加]** > **[機密情報の種類]** を選択します。
+1. **[コンテンツに含まれている]** セクションで、**[追加]** >**[機密情報の種類]** を選択します。
 
 1. **[機密情報の種類]** ポップアップ ページで、次の機密情報の種類を検索して選択します。
 
@@ -266,9 +266,9 @@ HR ドキュメントに暗号化とコンテンツ マーキングを適用す�
 
 このタスクでは、Internal ラベルの下にサブラベルを作成します。 このサブラベルでは、二重キー暗号化 (DKE) とダイナミックウォーターマーキングを使用して、法務担当者のみがアクセスする機密性の高いコンテンツを保護します。 また、ラベルをダウングレードするための正当な理由が必要なラベル ポリシーを構成します。
 
-1. 引き続き Client 1 VM (SC-401-CL1) に **SC-401-cl1\admin** アカウントでログインしている必要があります。
+1. 引き続き Client 1 VM (SC-401-CL1) に**SC-401-cl1\admin** アカウントでログインしている必要があります。
 
-1. **Microsoft Edge** で、 `https://purview.microsoft.com` に移動し、**Joni Sherman** として Microsoft Purview ポータルにログインします。
+1. **Microsoft Edge** で、`https://purview.microsoft.com` に移動し、**Joni Sherman** として Microsoft Purview ポータルにログインします。
 
 1. Microsoft Purview ポータルで、**[ソリューション]**、**[Microsoft Information Protection]**、**[秘密度ラベル]** の順に移動します。
 
@@ -347,9 +347,9 @@ HR ドキュメントに暗号化とコンテンツ マーキングを適用す�
 
 1. **[ポリシーの名前の設定] ページ**で、以下を入力します。
 
-   - **名前**: `Highly Confidential - Legal`
+   - **名前**:`Highly Confidential - Legal`
 
-   - **説明**: `Enables manual use of the DKE label for highly confidential content accessible by Legal.`
+   - **説明**:`Enables manual use of the DKE label for highly confidential content accessible by Legal.`
 
 1. [**次へ**] を選択します。
 
@@ -363,9 +363,9 @@ HR ドキュメントに暗号化とコンテンツ マーキングを適用す�
 
 このタスクでは、Microsoft Defender for Cloud Apps で Microsoft Purview との統合を有効にして、ファイル監視を動作させます。 この結果、Defender で Microsoft Purview からの変更された新しいファイルの秘密度ラベルがスキャンされ、そのラベルに基づいてコンテンツが検査され、ファイル ポリシーが適用できるようにファイルが監視されるようになります。
 
-1. Client 1 VM (SC-401-CL1) には **SC-401-CL1\admin** でログインし、Joni Sherman としてログインしておく必要があります。
+1. Client 1 VM (SC-401-CL1) には**SC-401-CL1\admin** でログインし、Joni Sherman としてログインしておく必要があります。
 
-1. **Microsoft Edge** を開き、`https://security.microsoft.com` に移動して **Microsoft Defender** を開きます。
+1. **Microsoft Edge** を開き、`https://security.microsoft.com` に移動して**Microsoft Defender** を開きます。
 
 1. 左側のナビゲーションで **[設定]** を選択し、**[クラウド アプリ]** を選択します。
 
@@ -460,17 +460,17 @@ You've created a file policy that applies a highly confidential sensitivity labe
 
 1. **[ファイル ポリシーの作成]** ページで、次の構成を行います。
 
-   - **ポリシー名**: `Auto-label externally shared files`
+   - **ポリシー名**:`Auto-label externally shared files`
 
-   - **ポリシー重大度**: **高**
+   - **ポリシー重大度**:**高**
 
-   - **カテゴリ**: **DLP**
+   - **カテゴリ**:**DLP**
 
    - **[次のすべてに一致するファイル] セクション**で、次を行います。
 
       - 最初のフィルターは、ドロップダウンを **[アクセス レベルが外部と等しい]** に設定します。
 
-      - 2 番目のフィルターでは、ドロップダウンを次のように構成します。 **最終変更後 (日付)** および今日の日付を使用します。
+      - 2 番目のフィルターでは、ドロップダウンを次のように構成します。**最終変更後 (日付)** および今日の日付を使用します。
 
           ![Defender でフィルター設定を示すスクリーンショット。](../Media/configure-file-policy-filter.png)
 

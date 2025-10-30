@@ -30,17 +30,17 @@ lab:
 
 1. **SC-401-cl1\admin** アカウントで Client 1 VM (SC-401-CL1) にログインします。
 
-1. Microsoft Edge で `JoniS@WWLxZZZZZZ.onmicrosoft.com` に移動します (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
+1. Microsoft Edge で`https://purview.microsoft.com` に移動し、`JoniS@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
 
-1. **[ソリューション]** > **[データ ライフサイクル管理]** > **[保持ラベル]** に移動します。
+1. **[ソリューション]** >**[データ ライフサイクル管理]** >**[保持ラベル]** に移動します。
 
 1. **[ラベル]** ページで、**[ラベルの作成]** を選択します。
 
 1. **[保持ラベルに名前を付ける]** ページで、次の情報を入力します。
 
-   - **名前**: `Sensitive Financial Records`
-   - **ユーザー向けの説明**: `Use for financial files with sensitive data that must be retained for audit or security purposes.`
-   - **管理者向けの説明**: `Retains high-impact financial data for 5 years to support audits and security investigations.`
+   - **名前**:`Sensitive Financial Records`
+   - **ユーザー向けの説明**:`Use for financial files with sensitive data that must be retained for audit or security purposes.`
+   - **管理者向けの説明**:`Retains high-impact financial data for 5 years to support audits and security investigations.`
 
 1. [**次へ**] を選択します。
 
@@ -65,7 +65,7 @@ lab:
 
 このタスクでは、保持ラベルを発行して、ユーザーが Exchange、SharePoint、OneDrive などの Microsoft 365 サービスに適用できるようにします。
 
-1. Microsoft Purview で、**[ソリューション]** > **[データ ライフサイクル管理]** > **[保持ラベル]** に移動します。
+1. Microsoft Purview で、**[ソリューション]** >**[データ ライフサイクル管理]** >**[保持ラベル]** に移動します。
 
 1. **[機密性の高い財務記録]** ラベルの横にあるチェックボックスをオンにし、**[ラベルの発行]** アイコン (![ラベルの発行アイコン](../Media/publish-labels-icon.png)) を選択して、この保持ラベルを発行します。
 
@@ -86,8 +86,8 @@ lab:
 
 1. **[ポリシーの名前を設定する]** で、以下を入力します。
 
-    - **名前**: `Sensitive Financial Data Retention`
-    - **説明**: `Makes the 'Sensitive Financial Records' label available to users in Exchange, SharePoint, and OneDrive.`
+    - **名前**:`Sensitive Financial Data Retention`
+    - **説明**:`Makes the 'Sensitive Financial Records' label available to users in Exchange, SharePoint, and OneDrive.`
 
 1. [**次へ**] を選択します。
 
@@ -107,8 +107,8 @@ lab:
 
 1. **[始めましょう]** ページで、次の情報を入力します。
 
-   - **名前**: `Auto-apply Personal Financial PII`
-   - **説明**: `Applies this label to personal financial data to help meet audit and investigation requirements. Retains content for 3 years.`
+   - **名前**:`Auto-apply Personal Financial PII`
+   - **説明**:`Applies this label to personal financial data to help meet audit and investigation requirements. Retains content for 3 years.`
 
 1. [**次へ**] を選択します。
 
@@ -120,7 +120,7 @@ lab:
 
 1. **[ポリシー スコープ]** ページで、**[次へ]** を選びます。
 
-1. **[作成するアイテム保持ポリシーの種類を選択する]** ページで、 **[静的]** を選びます。
+1. **[作成するアイテム保持ポリシーの種類を選択する]** ページで、**[静的]** を選びます。
 
 1. **[ラベルを公開する場所を選択する]** ページで、**[特定の場所を選択]** を選択し、次を選択します。
 
@@ -151,8 +151,8 @@ lab:
 
 1. **[アイテム保持ポリシーの名前を設定]** ページで以下を入力します。
 
-   - **名前**: `Teams Retention`
-   - **説明**: `Retains Teams chats and channel messages for 3 years, then deletes them to reduce long-term data risk.`
+   - **名前**:`Teams Retention`
+   - **説明**:`Retains Teams chats and channel messages for 3 years, then deletes them to reduce long-term data risk.`
 
 1. [**次へ**] を選択します。
 
@@ -172,7 +172,7 @@ lab:
 
    - **[特定の期間アイテムを保持]** を選択します。
    - **[特定の期間アイテムを保持]** の下で、ドロップダウン リストから **[カスタム]** を選択します。
-   - [年] フィールドを `3` に変更します。
+   - [年] フィールドを`3` に変更します。
    - **保持期間開始の条件**:アイテムの最終変更日時
    - **[保持期間の終了時]** :アイテムを自動的に削除する
 
@@ -188,31 +188,31 @@ Teams メッセージを自動的に削除する前に 3 年間保持する静�
 
 1. Microsoft Purview で、**[設定]**、**[ロールとスコープ]**、**[アダプティブ スコープ]** の順に移動します。
 
-1. **[アダプティブ スコープ]** ページで、 **[+ スコープを作成]** を選択します。
+1. **[アダプティブ スコープ]** ページで、**[+ スコープを作成]** を選択します。
 
 1. **[アダプティブ ポリシー スコープの名前を設定]** ページで、次を入力します。
 
-    - **名前**: `Leadership and Ops Groups`
-    - **説明**: `Targets Leadership and Operations M365 groups with privileged access to sensitive data.`
+    - **名前**:`Leadership and Ops Groups`
+    - **説明**:`Targets Leadership and Operations M365 groups with privileged access to sensitive data.`
 
 1. [**次へ**] を選択します。
 
-1. **[管理単位の割り当て]** ページで、 **[次へ]** を選択します。
+1. **[管理単位の割り当て]** ページで、**[次へ]** を選択します。
 
-1. **[作成するスコープの種類]** ページで、**[ユーザー]** を選択してから、**[次へ]** を選択します。
+1. **[作成するスコープの種類]** ページで、**[Microsoft 365 グループ]** を選択し、**[次へ]** を選択します。
 
 1. **[ユーザーを定義するクエリの作成]** ページの **[ユーザー属性]** セクションで、ユーザー属性の構成に対してこれらの値が選択されていることを確認します。
 
-   - **[属性]** ドロップダウンを選択し、**[部署]** を選択します
+   - **[属性]** ドロップダウンを選択し、**[名前]** を選択します
    - 既定値は次のフィールドの値と**同じ**にします
-   - **値**として `Leadership` を入力します
+   - **値**として`Leadership` を入力します
 
-1. 2 つ目の属性を追加するには、 **[ユーザーを定義するクエリの作成]** ページで **[+ 属性を追加]** を選択します。 先ほど構成した新しいフィールドで、次の値を構成します。
+1. 2 つ目の属性を追加するには、**[ユーザーを定義するクエリの作成]** ページで **[+ 属性を追加]** を選択します。 先ほど構成した新しいフィールドで、次の値を構成します。
 
    - クエリ演算子のドロップダウンを選択し、[And] から **[Or]** に更新します
-   - **[属性]** ドロップダウンを選択し、**[部署]** を選択します
+   - **[属性]** ドロップダウンを選択し、**[名前]** を選択します
    - 既定値は次のフィールドの値と**同じ**にします
-   - **値**として `Operations` を入力します
+   - **値**として`Operations` を入力します
 
 1. [**次へ**] を選択します。
 
@@ -232,16 +232,16 @@ Teams メッセージを自動的に削除する前に 3 年間保持する静�
 
 1. **[アイテム保持ポリシーの名前を設定]** ページで以下を入力します。
 
-    - **名前**: `Privileged Group Retention`
-    - **説明**: `Retains content from Leadership and Operations groups for 5 years to support audit and investigation.`
+    - **名前**:`Privileged Group Retention`
+    - **説明**:`Retains content from Leadership and Operations groups for 5 years to support audit and investigation.`
 
 1. [**次へ**] を選択します。
 
 1. **[Policy Scope] (ポリシー スコープ)** ページで、**[次へ]** を選択します。
 
-1. **[作成するアイテム保持ポリシーの種類を選択する]** ページで、 **[アダプティブ]** を選択し、 **[次へ]** を選択します。
+1. **[作成するアイテム保持ポリシーの種類を選択する]** ページで、**[アダプティブ]** を選択し、**[次へ]** を選択します。
 
-1. **[アダプティブ ポリシーのスコープと場所の選択]** ページで、 **[+ スコープを追加]** を選択します。
+1. **[アダプティブ ポリシーのスコープと場所の選択]** ページで、**[+ スコープを追加]** を選択します。
 
 1. **[アダプティブ ポリシー スコープの選択]** ポップアップ パネルで、**[リーダーシップと運用グループ]** のチェックボックスをオンにして、パネルの下部にある **[追加]** を選択します。
 
@@ -277,7 +277,7 @@ Teams メッセージを自動的に削除する前に 3 年間保持する静�
 
    ![アクション メニューを表示するための省略記号がある場所を示すスクリーンショット。](../Media/sharepoint-app-launcher.png)
 
-1. SharePoint ランディング ページで、「`Benefits`」を検索し、検索結果から **Benefits @ Contoso** を選択します。
+1. SharePoint ランディング ページで、「`Benefits`」を検索し、検索結果から**Benefits @ Contoso** を選択します。
 
 1. 左側のサイド バーで **[ドキュメント]** を選択します。
 

@@ -31,27 +31,27 @@ lab:
 
 このタスクでは、Joni Sherman にインサイダー リスク管理のロールを割り当てて、Microsoft Purview のインサイダー リスク機能にアクセスして管理できるようにします。
 
-1. **SC-401-cl1\admin** アカウントで Client 1 VM (SC-401-CL1) に ログインします。
+1. Client 1 VM (SC-401-CL1) に**SC-401-CL1\admin** アカウントでログインします。
 
-1. InPrivate ウィンドウで **Microsoft Edge** を開くには、タスク バーから Microsoft Edge を右クリックし、**[新しい InPrivate ウィンドウ]** を選択します。
+1. InPrivate ウィンドウで**Microsoft Edge** を開くには、タスク バーから Microsoft Edge を右クリックし、**[新しい InPrivate ウィンドウ]** を選択します。
 
-1. **`https://purview.microsoft.com`** に移動し、MOD 管理者である `admin@WWLxZZZZZZ.onmicrosoft.com` として Microsoft Purview ポータルにサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
+1. **`https://purview.microsoft.com`** に移動し、MOD 管理者である`admin@WWLxZZZZZZ.onmicrosoft.com` として Microsoft Purview ポータルにサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
 
-1. **[設定]** > **[役割とスコープ]** > **[役割グループ]** を選択します。
+1. **[設定]** >**[役割とスコープ]** >**[役割グループ]** を選択します。
 
 1. **[Microsoft Purview ソリューションの役割グループ]** ページで、**[Insider Risk Management]** を選択します。
 
 1. 右側の **[Insider Risk Management]** ポップアップ パネルから **[編集]** を選択します。
 
-1. **[役割グループのメンバーの編集]** ページで、 **[+ ユーザーの選択]** を選択します。
+1. **[役割グループのメンバーの編集]** ページで、**[+ ユーザーの選択]** を選択します。
 
-1. **[ユーザーの選択]** ポップアップ パネルで `Joni` を検索し、**Joni Sherman** のチェックボックスを選択します。
+1. **[ユーザーの選択]** ポップアップ パネルで`Joni` を検索し、**Joni Sherman** のチェックボックスを選択します。
 
 1. パネルの下部にある **[選択]** ボタンを選択します。
 
-1. **[役割グループのメンバーの編集]** ページで、 **[次へ]** を選択します。
+1. **[役割グループのメンバーの編集]** ページで、**[次へ]** を選択します。
 
-1. **[役割グループを確認して完了]** ページで、 **[保存]** を選択します。
+1. **[役割グループを確認して完了]** ページで、**[保存]** を選択します。
 
 1. 役割グループに Joni を正常に追加したら、**[役割グループが正常に更新されました]** ページで **[完了]** を選択します。
 
@@ -63,9 +63,9 @@ Microsoft Purview ポータルでインサイダー リスク管理を操作す�
 
 インサイダー リスク ポリシーを作成する前に、検出に必要なインジケーターをオンにします。 これらのインジケーターは、システムが検出する危険なアクティビティの種類を定義します。
 
-1. **Microsoft Edge** で **`https://purview.microsoft.com`** に移動し、`JoniS@WWLxZZZZZZ.onmicrosoft.com` として Microsoft Purview ポータルにサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
+1. Joni Sherman としてサインインしている Microsoft Edge ウィンドウに戻ります。 タブを更新して、新しいアクセス許可がアクティブになっていることを確認します。
 
-1. **[設定]** > **[インサイダー リスク管理]** を選択します。
+1. **[設定]** >**[インサイダー リスク管理]** を選択します。
 
 1. **ポリシー インジケーター**の左側のタブを選択します。
 
@@ -82,7 +82,7 @@ Microsoft Purview ポータルでインサイダー リスク管理を操作す�
 
 このタスクでは、データの流出に関連する危険なユーザーの動作を自動的に検出して対応するためのデータ漏洩クイック ポリシーを作成します。 クイック ポリシーには、組み込みのテンプレートと既定のしきい値を使用するため、セットアップが簡単になります。
 
-1. Microsoft Purview ポータルで、**[ソリューション]** > **[インサイダー リスク管理]** > **[ポリシー]** を選択します。
+1. Microsoft Purview ポータルで、**[ソリューション]** >**[インサイダー リスク管理]** >**[ポリシー]** を選択します。
 
 1. **[ポリシー]** ページで、**[ポリシーを作成]** を選択してから、**[クリック ポリシー]** を選択します。
 
@@ -139,7 +139,7 @@ Microsoft Purview ポータルでインサイダー リスク管理を操作す�
 
    このポリシーでは、組み込みトリガー イベントとインジケーターを使用します。 Microsoft Defender for Endpoint が防御回避や不要なソフトウェアなどの脅威を検出した場合にのみ、ユーザー アクティビティの評価を開始します。
 
-1. **[設定を確認して完了]** ページで、 **[送信]** を選択します。
+1. **[設定を確認して完了]** ページで、**[送信]** を選択します。
 
 1. **[ポリシーが作成されました]** ページで、**[完了]** を選択します。
 
@@ -151,9 +151,9 @@ Microsoft Purview ポータルでインサイダー リスク管理を操作す�
 
 このタスクでは、Microsoft Defender for Endpoint と Microsoft Purview の統合を有効にして、インサイダー リスク ポリシーでセキュリティ アラートを使用できるようにします。
 
-1. Microsoft Edge で `https://security.microsoft.com` に進み、Microsoft Defender に移動します。
+1. Microsoft Edge で`https://security.microsoft.com` に進み、Microsoft Defender に移動します。
 
-1. 左側のナビゲーション ウィンドウで、**[設定]** > **[エンドポイント]** > **[高度な機能]** を選択します。
+1. 左側のナビゲーション ウィンドウで、**[設定]** >**[エンドポイント]** >**[高度な機能]** を選択します。
 
 1. 下にスクロールし、**[エンドポイントアラートを Microsoft コンプライアンス センターと共有する]** トグルを選択して **[オン]** にして有効にします。
 
@@ -169,9 +169,9 @@ Defender for Endpoint と Microsoft Purview 間のアラートの共有を正常
 
 > [!note] 前のタスクでの統合処理が完了していない場合、Microsoft Defender for Endpoint インジケーターは灰色表示され、選択できない可能性があります。 その場合は、数分待ってページを更新してから続行します。
 
-1. **Microsoft Edge** で、 `https://purview.microsoft.com` に移動します。
+1. **Microsoft Edge** で、`https://purview.microsoft.com` に移動します。
 
-1. **[設定]** > **[インサイダー リスク管理]** を選択します。
+1. **[設定]** >**[インサイダー リスク管理]** を選択します。
 
 1. **ポリシー インジケーター**の左側のタブを選択します。
 
@@ -186,8 +186,8 @@ Defender for Endpoint と Microsoft Purview 間のアラートの共有を正常
 
 1. **[優先度ユーザー グループの名前と説明]** ページで、次を入力します。
 
-   - **名前**: `Finance team`
-   - **説明**: `Team members who manage financial operations, budgeting, and payroll systems.`
+   - **名前**:`Finance team`
+   - **説明**:`Team members who manage financial operations, budgeting, and payroll systems.`
 
 1. [**次へ**] を選択します。
 
@@ -217,7 +217,7 @@ Defender for Endpoint と Microsoft Purview 間のアラートの共有を正常
 
 このタスクでは、優先度の高いユーザーによる危険なアクティビティに対する Defender for Endpoint アラートを検出するインサイダー リスク ポリシーを作成します。
 
-1. Microsoft Purview ポータルで、**[ソリューション]** > **[インサイダー リスク管理]** > **[ポリシー]** を選択します。
+1. Microsoft Purview ポータルで、**[ソリューション]** >**[インサイダー リスク管理]** >**[ポリシー]** を選択します。
 
 1. **[ポリシー]** ページで、**[ポリシーを作成]** を選択してから、**[カスタム ポリシー]** を選択します。
 
@@ -225,8 +225,8 @@ Defender for Endpoint と Microsoft Purview 間のアラートの共有を正常
 
 1. **[ポリシーの名前の設定] ページ**で、以下を入力します。
 
-   - **名前**: `Security policy violations - Priority users`
-   - **説明**: `Detects Defender for Endpoint alerts for risky activity by priority users, such as malware or disabled protections.`
+   - **名前**:`Security policy violations - Priority users`
+   - **説明**:`Detects Defender for Endpoint alerts for risky activity by priority users, such as malware or disabled protections.`
 
 1. [**次へ**] を選択します。
 
@@ -244,7 +244,7 @@ Defender for Endpoint と Microsoft Purview 間のアラートの共有を正常
 
 1. **[インジケーターのしきい値の種類の選択]** ページで、既定値の **[Microsoft が提供するしきい値を適用する]** オプションを選択したまま、**[次へ]** を選択します。
 
-1. **[設定を確認して完了]** ページで、 **[送信]** を選択します。
+1. **[設定を確認して完了]** ページで、**[送信]** を選択します。
 
 1. **[ポリシーが作成されました]** ページで、**[完了]** を選択します。
 
@@ -254,15 +254,15 @@ Defender for Endpoint シグナルを使用して優先度の高いユーザー�
 
 このタスクでは、Microsoft Purview に通知テンプレートを作成して、インサイダー リスク アラートがトリガーされたときにユーザーに通知します。
 
-1. Microsoft Purview で、**[ソリューション]** > **[インサイダー リスク管理]** > **[通知テンプレート]** を選択します。
+1. Microsoft Purview で、**[ソリューション]** >**[インサイダー リスク管理]** >**[通知テンプレート]** を選択します。
 
 1. **[通知テンプレート]** ページで、**[+ 通知テンプレートの作成]** を選択します。
 
 1. 右側の **[新しい通知テンプレートの作成]** ポップアップ パネルに必要な情報を入力します。
 
-    - **テンプレート名**: `Security Violation Alert`
-    - **送信元**: `Joni Sherman`
-    - **件名**: `Unusual activity detected - please review`
+    - **テンプレート名**:`Security Violation Alert`
+    - **送信元**:`Joni Sherman`
+    - **件名**:`Unusual activity detected - please review`
     - **[メッセージ本文]** :
 
         ````html
