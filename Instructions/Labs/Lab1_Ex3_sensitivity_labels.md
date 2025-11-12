@@ -11,7 +11,6 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 **タスク**:
 
 1. 秘密度ラベルのサポートを有効にする
-1. 最新のラベル スキームに移行する
 1. ラベル グループを作成する
 1. 子ラベルを作成する
 1. ラベルを発行する
@@ -28,7 +27,7 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. **Microsoft Edge** を開き、`https://purview.microsoft.com` に移動します。
 
-1. 左側のナビゲーションで、**[設定]** >**[Microsoft Information Protection]** を選択します。
+1. 左側のナビゲーションで、**[設定]** > **[Microsoft Information Protection]** を選択します。
 
 1. **[Information Protection の設定]** ページで、**[秘密度ラベルを持つファイルの共同編集]** タブが表示されていることを確認します。
 
@@ -38,46 +37,49 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 これで、SharePoint および OneDrive での秘密度ラベルのサポートが有効になりました。
 
-## タスク 2 – 最新のラベル スキームに移行する
+<!--
 
-秘密度ラベルのサポートを有効にして、テナントで最新のラベル スキームが使用されていることを確認します。 従来のスキームが引き続き使用されている場合は、最新のスキームに移行して、新しいラベルとポリシーで最新の構成モデルが使用されるようにします。
+## Task 2 – Migrate to the modern label scheme
 
-1. 引き続き、**SC-401-CL1\admin** アカウントで Client 1 VM (SC-401-CL1) にログインし、Joni Sherman として Microsoft Purview にログインしておく必要があります。
+With sensitivity label support enabled, you'll confirm that the tenant uses the modern label scheme. If it still uses the classic scheme, you'll migrate to the modern one to ensure new labels and policies use the latest configuration model.
 
-1. 左側のナビゲーションで、**[Information Protection]** >**[秘密度ラベル]** の順に選択します。
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged into Microsoft Purview as Joni Sherman.
 
-1. **[秘密度ラベル]** ページで、**[最新のラベル スキームへの移行]** の情報ボックスを確認し、**[開始する]** を選択します。
+1. In the left navigation, select **Information Protection** > **Sensitivity labels**.
 
-1. **[最新のラベル スキームへの移行]** ポップアップで、概要を確認して既存のラベルとポリシーがどのような影響を受けるかを理解します。
+1. On the **Sensitivity labels** page, review the information box for **Migrate to the modern label scheme**, then select **Get started**.
 
-1. ポップアップの下部にある **[移行]** を選択します。
+1. In the **Migrate to the modern label scheme** flyout, review the summary to understand how existing labels and policies will be affected.
 
-1. **[最新のラベル スキームへの移行の確認]** ダイアログ ボックスで、**[移行を確認]** を選択します。
+1. At the bottom of the flyout, select **Migrate**.
 
-    > [!Note] **注**:移行プロセスが完了するまでに数分かかる場合があります。
+1. In the **Confirm migration to modern label scheme** dialog box, select **Confirm migration**.
 
-テナントが最新の秘密度ラベル スキームに正常に移行されました。 新しく作成するラベルとポリシーには、最新の構成エクスペリエンスが使用されるようになりました。
+    > [!Note] **Note**: The migration process might take a few minutes to complete.
 
-## タスク 3 – ラベル グループを作成する
+You've successfully migrated your tenant to the modern sensitivity label scheme. New labels and policies you create will now use the modern configuration experience.
+
+-->
+## タスク 2 – ラベル グループを作成する
 
 このタスクでは、内部秘密度ラベルを整理するためのラベル グループを作成します。 ラベル グループは、部署や事業単位の分類など、関連するラベルのコンテナーとして機能します。
 
-1. 引き続き Client 1 VM (SC-401-CL1) に**SC-401-CL1\admin** アカウントでログインしている必要があります。
+1. 引き続き Client 1 VM (SC-401-CL1) に **SC-401-CL1\admin** アカウントでログインしている必要があります。
 
-1. **Microsoft Edge** で、`https://purview.microsoft.com` に移動します。
+1. **Microsoft Edge** で、 `https://purview.microsoft.com` に移動します。
 
 1. Microsoft Purview ポータルの左サイドバーで、**[ソリューション]** を選択してから、**[Microsoft Information Protection]** を選択します。
 
 1. **[Microsoft Information Protection]** ページの左サイドバーで、**[秘密度ラベル]** を選択します。
 
-1. **[秘密度ラベル]** ページで、**[+ 作成]** >**[ラベル グループ]** の順に選択します。
+1. **[秘密度ラベル]** ページで、**[+ 作成]**  >  **[ラベル グループ]** の順に選択します。
 
 1. **[新しいラベル グループ]** の構成が開始されます。 **[このラベル グループの基本的な詳細を指定します]** で、次のように入力します。
 
-    - **名前**:`Internal`
-    - **表示名**:`Internal`
-    - **ユーザー向けの説明**:`Internal sensitivity label.`
-    - **管理者向けの説明**:`Internal sensitivity label group for Contoso.`
+    - **名前**: `Internal`
+    - **表示名**: `Internal`
+    - **ユーザー向けの説明**: `Internal sensitivity label.`
+    - **管理者向けの説明**: `Internal sensitivity label group for Contoso.`
 
 1. [**次へ**] を選択します。
 
@@ -87,7 +89,7 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 内部用のラベル グループを作成しました。 このグループは、特定の部署またはデータ カテゴリの関連ラベルを管理するのに役立ちます。
 
-## タスク 4 – 子ラベルを作成する
+## タスク 3 – 子ラベルを作成する
 
 ラベル グループを作成したので、人事関連コンテンツ用の子ラベルを追加します。 このラベルは、暗号化とコンテンツ マーキングを適用して、承認されていないアクセスから人事データを保護します。
 
@@ -97,10 +99,10 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. **[新しい秘密度ラベル]** ウィザードが起動します。 **[このラベルの基本的な詳細を指定します]** で、次のように入力します。
 
-   - **名前**:`Employee data (HR)`
-   - **表示名**:`Employee data (HR)`
-   - **ユーザー向けの説明**:`This HR label is the default label for all specified documents in the HR Department.`
-   - **管理者向けの説明**:`This label is created in consultation with Ms. Jones (Head of the HR department). Contact her if you need to change the label settings.`
+   - **名前**: `Employee data (HR)`
+   - **表示名**: `Employee data (HR)`
+   - **ユーザー向けの説明**: `This HR label is the default label for all specified documents in the HR Department.`
+   - **管理者向けの説明**: `This label is created in consultation with Ms. Jones (Head of the HR department). Contact her if you need to change the label settings.`
 
 1. [**次へ**] を選択します。
 
@@ -144,13 +146,13 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 "内部" ラベル グループ内に子ラベルを作成しました。 このラベルは、人事ドキュメントに暗号化とコンテンツのマーキングを適用して、機密データを簡単に識別し、ポリシーで保護できるようにします。
 
-## タスク 5 – ラベルを発行する
+## タスク 4 – ラベルを発行する
 
 次に、人事部門のユーザーがドキュメントにラベルを適用できるように、"内部" ラベル グループから人事ラベルを発行します。
 
-1. Client 1 VM (SC-401-CL1) には**SC-401-cl1\admin** アカウントでログインし、Microsoft Purview には**Joni Sherman** としてログインしておく必要があります。
+1. Client 1 VM (SC-401-CL1) には **SC-401-cl1\admin** アカウントでログインし、Microsoft Purview には **Joni Sherman** としてログインしておく必要があります。
 
-1. **Microsoft Edge** で、Microsoft Purview ポータルのタブがまだ開かれているはずです。 そうでない場合は、**`https://purview.microsoft.com`** >**[ソリューション]** >**[Microsoft Information Protection]** >**[秘密度ラベル]** に移動します。
+1. **Microsoft Edge** で、Microsoft Purview ポータルのタブがまだ開かれているはずです。 そうでない場合は、**`https://purview.microsoft.com`** > **[ソリューション]** > **[Microsoft Information Protection]** > **[秘密度ラベル]** に移動します。
 
 1. **[秘密度ラベル]** ページで **[ラベルを発行]** を選択します。
 
@@ -168,37 +170,37 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. **[ポリシー設定]** ページで **[次へ]** を選択します。
 
-1. **[ドキュメントの既定の設定]** で、**[次へ]** を選択します。
+1. **[ドキュメントの既定の設定]** で、 **[次へ]** を選択します。
 
-1. **[メールの既定の設定]** で、**[次へ]** を選択します。
+1. **[メールの既定の設定]** で、 **[次へ]** を選択します。
 
-1. **[会議と予定表イベントの既定の設定]** で、**[次へ]** を選択します。
+1. **[会議と予定表イベントの既定の設定]** で、 **[次へ]** を選択します。
 
 1. **[Fabric および Power BI コンテンツの既定の設定]** ページで、**[次へ]** を選択します。
 
 1. **[ポリシーの名前の設定] ページ**で、以下を入力します。
 
-   - **名前**:`Internal HR employee data`
+   - **名前**: `Internal HR employee data`
 
-   - **秘密度ラベル ポリシーの説明を入力してください**:`This HR label is to be applied to internal HR employee data.`
+   - **秘密度ラベル ポリシーの説明を入力してください**: `This HR label is to be applied to internal HR employee data.`
 
 1. [**次へ**] を選択します。
 
 1. **[確認と完了]** ページで、**[送信]** を選択します。
 
-1. **[新しいポリシーが作成されました]** ページで、**[完了]** を選択して、ラベル ポリシーの発行を完了します。
+1. **[新しいポリシーが作成されました]** ページで、 **[完了]** を選択して、ラベル ポリシーの発行を完了します。
 
 "内部" ラベル グループとその人事ラベルを発行したので、ユーザーは、それを人事ドキュメントに適用できるようになりました。 ポリシーがサービス全体に伝達されるまでに最大 24 時間かかる場合があります。
 
-## タスク 6 – 自動ラベル付けを構成する
+## タスク 5 – 自動ラベル付けを構成する
 
 次に、財務データの子ラベルを作成し、クレジット カードや銀行の支店番号などの財務識別子を含むコンテンツに自動的に適用されるように構成します。
 
-1. 引き続き Client 1 VM (SC-401-CL1) に**SC-401-cl1\admin** アカウントでログインしている必要があります。
+1. 引き続き Client 1 VM (SC-401-CL1) に **SC-401-cl1\admin** アカウントでログインしている必要があります。
 
-1. **Microsoft Edge** で、`https://purview.microsoft.com` に移動し、**Joni Sherman** として Microsoft Purview ポータルにログインします。
+1. **Microsoft Edge** で、 `https://purview.microsoft.com` に移動し、**Joni Sherman** として Microsoft Purview ポータルにログインします。
 
-1. Microsoft Purview ポータルで、**[ソリューション]** >**[Information Protection]** >**[秘密度ラベル]** の順に選択します。
+1. Microsoft Purview ポータルで、**[ソリューション]**  >  **[Information Protection]**  >  **[秘密度ラベル]** の順に選択します。
 
 1. **[秘密度ラベル]** ページで、**Internal** 秘密度ラベルを見つけます。 垂直の省略記号 (**[...]**) を選択し、ドロップダウン メニューから **[+ グループにラベルを作成する]** を選択します。
 
@@ -217,13 +219,13 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. [**次へ**] を選択します。
 
-1. **[選択した項目の種類の保護設定を選択します]** ページで、**[次へ]** を選択します。
+1. **[選択した項目の種類の保護設定を選択します]** ページで、 **[次へ]** を選択します。
 
 1. **[ファイルとメールの自動ラベル付け]** ページで、**[ファイルとメールの自動ラベル付け]** を有効に設定します。
 
-1. **[これらの条件に一致するコンテンツを検出する]** セクションで、**[+条件の追加]** > を選択し、**[コンテンツに含まれている]** を選択します。
+1. **[これらの条件に一致するコンテンツを検出する]** セクションで、**[+条件の追加]** >  を選択し、**[コンテンツに含まれている]** を選択します。
 
-1. **[コンテンツに含まれている]** セクションで、**[追加]** >**[機密情報の種類]** の順に選択します。
+1. **[コンテンツに含まれている]** セクションで、**[追加]**  >  **[機密情報の種類]** の順に選択します。
 
 1. **[機密情報の種類]** ポップアップ ページで、次の機密情報の種類を検索して選択します。
 
@@ -273,15 +275,15 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 財務データ用の子ラベルを作成し、財務情報を含むコンテンツを検出してラベル付けする自動ラベル付けポリシーを構成しました。
 
-## タスク 7 – 機密コンテンツ用の DKE ラベルを作成して発行する
+## タスク 6 - 機密コンテンツの DKE ラベルを作成して発行する
 
 次に、"内部" グループに、二重キー暗号化 (DKE) と動的透かしを使用して機密の法的コンテンツを保護する子ラベルを作成します。
 
-1. 引き続き Client 1 VM (SC-401-CL1) に**SC-401-cl1\admin** アカウントでログインしている必要があります。
+1. 引き続き Client 1 VM (SC-401-CL1) に **SC-401-cl1\admin** アカウントでログインしている必要があります。
 
-1. **Microsoft Edge** で、`https://purview.microsoft.com` に移動し、**Joni Sherman** として Microsoft Purview ポータルにログインします。
+1. **Microsoft Edge** で、 `https://purview.microsoft.com` に移動し、**Joni Sherman** として Microsoft Purview ポータルにログインします。
 
-1. Microsoft Purview ポータルで、**[ソリューション]** >**[Information Protection]** >**[秘密度ラベル]** の順に選択します。
+1. Microsoft Purview ポータルで、**[ソリューション]**  >  **[Information Protection]**  >  **[秘密度ラベル]** の順に選択します。
 
 1. **[秘密度ラベル]** ページで、**[内部]** 秘密度ラベル グループを見つけます。 垂直の省略記号 (**[...]**) を選択し、ドロップダウン メニューから **[+ グループにラベルを作成する]** を選択します。
 
@@ -358,9 +360,9 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 1. **[ポリシーの名前の設定] ページ**で、以下を入力します。
 
-   - **名前**:`Confidential Legal`
+   - **名前**: `Confidential Legal`
 
-   - **説明**:`Enables manual use of the DKE label for confidential content accessible by Legal.`
+   - **説明**: `Enables manual use of the DKE label for confidential content accessible by Legal.`
 
 1. [**次へ**] を選択します。
 
@@ -370,13 +372,13 @@ Contoso Ltd. の情報セキュリティ管理者である Joni Sherman は、�
 
 二重キー暗号化と動的透かしを使用して子ラベルを作成し、発行しました。 このラベルは、許可されているユーザーへのアクセスを制限し、分類のダウングレードの正当な理由を強制します。
 
-## タスク 8 – Defender for Cloud Apps で Microsoft Purview 統合を有効にする
+## タスク 7 - Defender for Cloud Apps で Microsoft Purview との統合を有効にする
 
 秘密度ラベルを作成して公開したので、次に、Microsoft Purview と Microsoft Defender for Cloud Apps を統合します。 この統合により、Defender で、ファイルの秘密度ラベルをスキャンし、ファイルの監視を適用できるようになります。
 
-1. Client 1 VM (SC-401-CL1) には**SC-401-CL1\admin** でログインし、Joni Sherman としてログインしておく必要があります。
+1. Client 1 VM (SC-401-CL1) には **SC-401-CL1\admin** でログインし、Joni Sherman としてログインしておく必要があります。
 
-1. **Microsoft Edge** を開き、`https://security.microsoft.com` に移動して**Microsoft Defender** を開きます。
+1. **Microsoft Edge** を開き、`https://security.microsoft.com` に移動して **Microsoft Defender** を開きます。
 
 1. 左側のナビゲーションで **[設定]** を選択し、**[クラウド アプリ]** を選択します。
 
@@ -459,7 +461,7 @@ Now that label scanning is enabled, you'll create a file policy that applies the
 You've created a file policy that applies a highly confidential sensitivity label to externally shared files located in the Mark 8 Project folders in SharePoint and OneDrive. Once a matching file is detected, Defender for Cloud Apps will apply the label automatically.
 -->
 
-## タスク 9 – 外部共有ファイルにラベルを付けるファイル ポリシーを作成する
+## タスク 8 - 外部共有ファイルにラベルを付けるファイル ポリシーを作成する
 
 最後に、外部で共有されているファイルに秘密度ラベルを自動的に適用するファイル ポリシーを作成します。 これにより、機密コンテンツは、組織外で共有されている場合でも確実に保護されます。
 
@@ -471,17 +473,17 @@ You've created a file policy that applies a highly confidential sensitivity labe
 
 1. **[ファイル ポリシーの作成]** ページで、次の構成を行います。
 
-   - **ポリシー名**:`Auto-label externally shared files`
+   - **ポリシー名**: `Auto-label externally shared files`
 
-   - **ポリシー重大度**:**高**
+   - **ポリシー重大度**: **高**
 
-   - **カテゴリ**:**DLP**
+   - **カテゴリ**: **DLP**
 
    - **[次のすべてに一致するファイル] セクション**で、次を行います。
 
       - 最初のフィルターは、ドロップダウンを **[アクセス レベルが外部と等しい]** に設定します。
 
-      - 2 番目のフィルターでは、ドロップダウンを次のように構成します。**最終変更後 (日付)** および今日の日付を使用します。
+      - 2 番目のフィルターでは、ドロップダウンを次のように構成します。 **最終変更後 (日付)** および今日の日付を使用します。
 
           ![Defender でフィルター設定を示すスクリーンショット。](../Media/configure-file-policy-filter.png)
 
