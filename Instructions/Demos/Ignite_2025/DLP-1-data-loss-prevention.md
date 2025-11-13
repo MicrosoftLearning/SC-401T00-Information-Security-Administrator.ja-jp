@@ -171,9 +171,10 @@ In this task, you'll create an endpoint DLP policy that blocks users from pastin
 
       - Select **+ Add group**.
       - In the **Choose sensitive service domain groups** flyout, select the checkbox for **Generative AI Websites**, then select **Add**.
-      - Back on the **Sensitive service domain restrictions** flyout, select **Save**.
+      - Back on the **Sensitive service domain restrictions** flyout, change the action in the dropdown from **Audit only** to **Block**.
+      - Select **Save**.
 
-   1. In the **Create rule** flyout, under **Upload to a restricted cloud service domain or access from an unallowed browser**, set the restriction to **Block**.
+   1. In the **Create rule** flyout, under **Upload to a restricted cloud service domain or access from an unallowed browser**, set the restriction to **Audit only**.
 
 1. In the same **Service domain and browser activities** section:
 
@@ -185,9 +186,10 @@ In this task, you'll create an endpoint DLP policy that blocks users from pastin
 
       - Select **+ Add group**.
       - In the **Choose sensitive service domain groups** flyout, select the checkbox for **Generative AI Websites**, then select **Add**.
-      - Back on the **Sensitive service domain restrictions** flyout, select **Save**.
+      - Back on the **Sensitive service domain restrictions** flyout, change the action in the dropdown from **Audit only** to **Block**.
+      - Select **Save**.
 
-   1. In the **Create rule** flyout, under **Paste to supported browsers**, set the restriction to **Block**.
+   1. In the **Create rule** flyout, under **Paste to supported browsers**, set the restriction to **Audit only**.
 
 1. Under **User notifications**:
 
@@ -232,13 +234,7 @@ Now that the DLP rule is in place, you'll configure alert settings so DLP incide
 
       - Select the checkbox to the left of the **MOD Administrator** account, then select **Add** at the bottom of the flyout.
 
-   - Select **Send alert when the volume of matched activities reaches a threshold**.
-
-   - Select the checkbox for **Instances more than or equal to _15_ matched activities**
-
-   - In **During the last**, enter **60** minutes.
-
-    ![Screenshot showing incident alert settings in a data loss prevention rule.](./media/incident-alert-settings.png)
+   - Select **Send alert every time an activity matches the rule**.
 
 1. Select **Save** at the bottom of the flyout.
 
@@ -250,7 +246,7 @@ Now that the DLP rule is in place, you'll configure alert settings so DLP incide
 
 1. Select **Done** on the **Policy updated** page.
 
-You configured incident alert settings so that medium-severity DLP alerts are sent to the MOD Administrator account when multiple matches occur within an hour.
+You configured incident alert settings so that medium-severity DLP alerts are sent to the MOD Administrator account whenever a rule match occurs.
 
 ## Task 5 – Configure DLP alert aggregation
 
