@@ -1,4 +1,10 @@
-# Lab – Prevent data exposure in Copilot and AI apps with data loss prevention
+---
+lab:
+    title: 'Prevent data exposure in Copilot and AI apps with Data Loss Prevention'
+    module: 'Prevent data exposure in Copilot and AI apps with Data Loss Prevention'
+---
+
+# Lab – Prevent data exposure in Copilot and AI apps with Data Loss Prevention
 
 Megan Bowen, the Information Security Administrator at Contoso Ltd., is strengthening protections as the company expands its use of Microsoft 365 Copilot. Leadership wants to ensure sensitive information isn't processed by Copilot or shared with external AI tools. To meet this goal, Megan will configure and refine data loss prevention (DLP) policies that restrict Copilot from accessing highly confidential project data, prevent banking details from being uploaded to AI websites, and improve how DLP alerts are managed and reported.
 
@@ -14,11 +20,11 @@ Megan Bowen, the Information Security Administrator at Contoso Ltd., is strength
 
 In this task, you'll create a data loss prevention (DLP) policy that restricts Microsoft 365 Copilot from processing content labeled as highly confidential.
 
-1. Log into Client 1 VM (SC-401-CL1) with the **Admin** account.
-
-1. Open Microsoft Edge.
+1. With the lab environment ready, open **Microsoft Edge**.
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and sign in as **Megan Bowen** (`MeganB@WWLxZZZZZZ.onmicrosoft.com`, where ZZZZZZ is your unique tenant ID). Use the password provided by your lab host.
+
+1. When prompted to stay signed in, you can select either **Yes**.
 
 1. Select **Get started** on the welcome message for the new Microsoft Purview portal.
 
@@ -87,6 +93,8 @@ In this task, you'll create a data loss prevention (DLP) policy that restricts M
 1. Select **Next**.
 
 1. On the **Review and finish** page review your settings then select **Submit**.
+
+    >[!Note] **Note:** If you see a **Permission required** label, it indicates that administrative consent is needed to enable the policy across some locations. This will not affect completion of this exercise.
 
 1. On the **New policy created** page select **Done**.
 
@@ -163,9 +171,10 @@ In this task, you'll create an endpoint DLP policy that blocks users from pastin
 
       - Select **+ Add group**.
       - In the **Choose sensitive service domain groups** flyout, select the checkbox for **Generative AI Websites**, then select **Add**.
-      - Back on the **Sensitive service domain restrictions** flyout, select **Save**.
+      - Back on the **Sensitive service domain restrictions** flyout, change the action in the dropdown from **Audit only** to **Block**.
+      - Select **Save**.
 
-   1. In the **Create rule** flyout, under **Upload to a restricted cloud service domain or access from an unallowed browser**, set the restriction to **Block**.
+   1. In the **Create rule** flyout, under **Upload to a restricted cloud service domain or access from an unallowed browser**, set the restriction to **Audit only**.
 
 1. In the same **Service domain and browser activities** section:
 
@@ -177,9 +186,10 @@ In this task, you'll create an endpoint DLP policy that blocks users from pastin
 
       - Select **+ Add group**.
       - In the **Choose sensitive service domain groups** flyout, select the checkbox for **Generative AI Websites**, then select **Add**.
-      - Back on the **Sensitive service domain restrictions** flyout, select **Save**.
+      - Back on the **Sensitive service domain restrictions** flyout, change the action in the dropdown from **Audit only** to **Block**.
+      - Select **Save**.
 
-   1. In the **Create rule** flyout, under **Paste to supported browsers**, set the restriction to **Block**.
+   1. In the **Create rule** flyout, under **Paste to supported browsers**, set the restriction to **Audit only**.
 
 1. Under **User notifications**:
 
@@ -204,7 +214,7 @@ You've created an endpoint DLP policy that blocks banking data from being pasted
 
 Now that the DLP rule is in place, you'll configure alert settings so DLP incidents are routed to the right administrator for timely review.
 
-1. On the **Policies** page of the **Data Loss Prevention**, select the **Block AI website uploads of banking data** policy, then select **Edit policy**.
+1. On the **Policies** page of the **Data Loss Prevention**, select the **Block AI website uploads of banking data** policy, then select **Edit policy** (pencil) icon (![Icon of a pencil.](./media/edit-pencil-icon.png)).
 
 1. Select **Next** until you reach the **Customize advanced DLP rules** page.
 
@@ -224,13 +234,7 @@ Now that the DLP rule is in place, you'll configure alert settings so DLP incide
 
       - Select the checkbox to the left of the **MOD Administrator** account, then select **Add** at the bottom of the flyout.
 
-   - Select **Send alert when the volume of matched activities reaches a threshold**.
-
-   - Select the checkbox for **Instances more than or equal to _15_ matched activities**
-
-   - In **During the last**, enter **60** minutes.
-
-    ![Screenshot showing incident alert settings in a data loss prevention rule.](./media/incident-alert-settings.png)
+   - Select **Send alert every time an activity matches the rule**.
 
 1. Select **Save** at the bottom of the flyout.
 
@@ -242,7 +246,7 @@ Now that the DLP rule is in place, you'll configure alert settings so DLP incide
 
 1. Select **Done** on the **Policy updated** page.
 
-You configured incident alert settings so that medium-severity DLP alerts are sent to the MOD Administrator account when multiple matches occur within an hour.
+You configured incident alert settings so that medium-severity DLP alerts are sent to the MOD Administrator account whenever a rule match occurs.
 
 ## Task 5 – Configure DLP alert aggregation
 

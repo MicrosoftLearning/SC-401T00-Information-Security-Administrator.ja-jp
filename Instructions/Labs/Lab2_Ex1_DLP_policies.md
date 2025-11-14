@@ -31,9 +31,9 @@ Contoso Ltd. で情報セキュリティ管理者として新しく採用され�
 
 1. **SC-401-CL1\admin** アカウントを使って Client 1 VM (SC-401-CL1) にログインします。
 
-1. **Microsoft Edge** で、 **`https://purview.microsoft.com`** に移動し、**Joni Sherman** として Microsoft Purview ポータルにログインします。 `JoniS@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
+1. **Microsoft Edge** で、**`https://purview.microsoft.com`** に移動し、**Joni Sherman** として Microsoft Purview ポータルにログインします。 `JoniS@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
 
-1. **[ソリューション]** > **[データ損失防止]** > **[ポリシー]** を選択します。
+1. **[ソリューション]** >**[データ損失防止]** >**[ポリシー]** を選択します。
 
 1. **[ポリシー]** ページで **[+ ポリシーを作成]** を選択し、新しいデータ損失防止ポリシーを作成するための構成を開始します。
 
@@ -45,8 +45,8 @@ Contoso Ltd. で情報セキュリティ管理者として新しく採用され�
 
 1. **[DLP ポリシーの名前の設定]** ページで、以下を入力します。
 
-   - **名前**: `DLP - Credit Card Protection`
-   - **説明**: `Detect and restrict sharing of credit card numbers in Teams messages.`
+   - **名前**:`DLP - Credit Card Protection`
+   - **説明**:`Detect and restrict sharing of credit card numbers in Teams messages.`
 
 1. [**次へ**] を選択します。
 
@@ -63,18 +63,18 @@ Contoso Ltd. で情報セキュリティ管理者として新しく採用され�
 1. **[ルールの作成]** ポップアップ ページ:
     - **[名前]** フィールドに「`Credit card information`」と入力します。
 
-1. **[条件]** で、**[+ 条件の追加]** > **[コンテンツが Microsoft 365 から共有されている]** を選択します。
+1. **[条件]** で、**[+ 条件の追加]** >**[コンテンツが Microsoft 365 から共有されている]** を選択します。
 
 1. **[コンテンツが Microsoft 365 から共有されている]** セクション:
     - **[組織外の連絡先]** オプションを選択します。
 
-1. **[+ 条件の追加]** > **[コンテンツに含まれている]** を選択します。
+1. **[+ 条件の追加]** >**[コンテンツに含まれている]** を選択します。
 
 1. 新しい **[コンテンツに含まれている]** セクション:
-    - **[追加]** > **[機密情報の種類]** を選択します。
+    - **[追加]** >**[機密情報の種類]** を選択します。
     - **[機密情報の種類]** ページで、Credit Card Number を検索して選択し、**[追加]** を選択します。`Credit Card Number`
 
-1. **[操作]** で、**[+ 処理の追加]** > **[Microsoft 365 の場所にあるコンテンツへのアクセスを制限または暗号化する]** を選択します。
+1. **[操作]** で、**[+ 処理の追加]** >**[Microsoft 365 の場所にあるコンテンツへのアクセスを制限または暗号化する]** を選択します。
 
 1. **[Microsoft 365 の場所にあるコンテンツへのアクセスを制限または暗号化する]** セクション:
     - **[組織外のユーザーのみをブロックする]** を選択します。
@@ -100,7 +100,7 @@ Contoso Ltd. で情報セキュリティ管理者として新しく採用され�
 
 1. **[確認して完了]** ページで設定を確認し、**[送信]** を選択します
 
-1. **[新しいポリシーが作成されました]** ページで、 **[完了]** を選択します。
+1. **[新しいポリシーが作成されました]** ページで、**[完了]** を選択します。
 
 コンテンツのクレジット カード番号をスキャンし、業務上の正当な理由による上書きを許可する DLP ポリシーを作成しました。
 
@@ -108,9 +108,9 @@ Contoso Ltd. で情報セキュリティ管理者として新しく採用され�
 
 このタスクでは、既存の DLP ポリシーのスコープを拡大して、Exchange メールを含めます。 これにより、追加の通信チャネル間で一貫した保護を実現できます。
 
-1. Client 1 VM (SC-401-CL1) には **SC-401-CL1\admin** アカウントでログインし、Microsoft 365 には **Joni Sherman** としてログインしておく必要があります。
+1. Client 1 VM (SC-401-CL1) には**SC-401-CL1\admin** アカウントでログインし、Microsoft 365 には**Joni Sherman** としてログインしておく必要があります。
 
-1. 引き続き Microsoft Purview の **[ポリシー]** ページにある必要があります。 **Microsoft Edge** を開き、`https://purview.microsoft.com` に移動します。 **[ソリューション]** > **[データ損失防止]** > **[ポリシー]** を選択します。
+1. 引き続き Microsoft Purview の **[ポリシー]** ページにある必要があります。 **Microsoft Edge** を開き、`https://purview.microsoft.com` に移動します。 **[ソリューション]** >**[データ損失防止]** >**[ポリシー]** を選択します。
 
 1. **[ポリシー]** ページで、先ほど作成した **[DLP - Credit Card Protection]** のチェックボックスをオンにし、**[ポリシーの編集]** を選択してポリシー構成を開きます。
 
@@ -134,11 +134,11 @@ Teams メッセージと共にメールをスキャンするようにポリシ�
 
 このタスクでは、PowerShell を使用して DLP ポリシーを作成し、メールによる従業員 ID の共有をブロックします。 このアプローチは、スクリプトを使用してポリシー設定を定義および適用する方法を示します。
 
-1. 引き続き Client 1 VM (SC-401-CL1) に **SC-401-CL1\admin** アカウントでログインしている必要があります。
+1. 引き続き Client 1 VM (SC-401-CL1) に**SC-401-CL1\admin** アカウントでログインしている必要があります。
 
 1. タスク バーにある **[開始]** ボタンを右クリックして管理者特権の PowerShell ウィンドウを開き、**[ターミナル (管理者)]** を選択します。
 
-1. ターミナル ウィンドウで**モジュールのインストール** コマンドレットを実行して、最新の **Exchange Online PowerShell** モジュール バージョンをインストールします。
+1. ターミナル ウィンドウで**モジュールのインストール** コマンドレットを実行して、最新の**Exchange Online PowerShell** モジュール バージョンをインストールします。
 
     ```powershell
     Install-Module ExchangeOnlineManagement
@@ -152,7 +152,7 @@ Teams メッセージと共にメールをスキャンするようにポリシ�
     Connect-IPPSSession
     ```
 
-1. **[アカウントにサインイン]** ポップアップ ウィンドウで **Joni Sherman** (`JoniS@WWLxZZZZZZ.onmicrosoft.com`) としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
+1. **[アカウントにサインイン]** ポップアップ ウィンドウで**Joni Sherman** (`JoniS@WWLxZZZZZZ.onmicrosoft.com`) としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 ユーザー アカウントのパスワードは、ラボ ホスティング プロバイダーから提供されます。
 
 1. **New-DlpCompliancePolicy** コマンドレットを実行して、すべての Exchange メールボックスをスキャンする DLP ポリシーを作成します。
 
@@ -160,7 +160,7 @@ Teams メッセージと共にメールをスキャンするようにポリシ�
     New-DlpCompliancePolicy -Name "EmployeeID DLP Policy" -Comment "This policy blocks sharing of Employee IDs" -ExchangeLocation All
     ```
 
-1. **New-DlpComplianceRule** コマンドレットを実行して、前の手順で作成した DLP ポリシーに DLP ルールを追加します。 このポリシーでは、前の演習で作成した **Contoso Employee IDs** の機密情報の種類を使用します。
+1. **New-DlpComplianceRule** コマンドレットを実行して、前の手順で作成した DLP ポリシーに DLP ルールを追加します。 このポリシーでは、前の演習で作成した**Contoso Employee IDs** の機密情報の種類を使用します。
 
     ```powershell
     New-DlpComplianceRule -Name "EmployeeID DLP rule" -Policy "EmployeeID DLP Policy" -BlockAccess $true -ContentContainsSensitiveInformation @{Name="Contoso Employee IDs"}
@@ -178,9 +178,9 @@ PowerShell を使用して、従業員 ID の共有をブロックする DLP ポ
 
 DLP ポリシーをシミュレーションでテストしたので、次にポリシーをアクティブにして、アクションの適用を開始します。
 
-1. Client 1 VM (SC-401-CL1) には **SC-401-CL1\admin** アカウントでログインし、Microsoft 365 には **Joni Sherman** としてログインしておく必要があります。
+1. Client 1 VM (SC-401-CL1) には**SC-401-CL1\admin** アカウントでログインし、Microsoft 365 には**Joni Sherman** としてログインしておく必要があります。
 
-1. **Microsoft Edge** で、`https://purview.microsoft.com` > **[ソリューション]** > **[データ損失防止]** に移動し、左側のサイドバーから **[ポリシー]** を選択して DLP ポリシーに移動します。
+1. **Microsoft Edge** で、`https://purview.microsoft.com` >**[ソリューション]** >**[データ損失防止]** に移動し、左側のサイドバーから **[ポリシー]** を選択して DLP ポリシーに移動します。
 
 1. **[ポリシー]** ページで **[DLP - Credit Card Protection]** ポリシーを選択します。
 
@@ -202,15 +202,15 @@ DLP ポリシーをシミュレーションでテストしたので、次にポ�
 
 複数のポリシーが存在する場合、その優先度によって最初に適用されるポリシーが決まります。 このタスクでは、EmployeeID DLP Policy を最も高い優先度に移動させます。
 
-1. Client 1 VM (SC-401-CL1) には **SC-401-CL1\admin** アカウントでログインし、Microsoft 365 には **Joni Sherman** としてログインしておく必要があります。
+1. Client 1 VM (SC-401-CL1) には**SC-401-CL1\admin** アカウントでログインし、Microsoft 365 には**Joni Sherman** としてログインしておく必要があります。
 
-1. **Microsoft Edge** で、Microsoft Purview ポータルのタブが引き続き **[ポリシー]** ページに開かれているはずです。 **Microsoft Edge** を開き、`https://purview.microsoft.com` に移動します。 **[ソリューション]** > **[データ損失防止]** > **[ポリシー]** を選択します。
+1. **Microsoft Edge** で、Microsoft Purview ポータルのタブが引き続き **[ポリシー]** ページに開かれているはずです。 **Microsoft Edge** を開き、`https://purview.microsoft.com` に移動します。 **[ソリューション]** >**[データ損失防止]** >**[ポリシー]** を選択します。
 
 1. **[ポリシー]** ページで、**[EmployeeID DLP Policy]** を選択します。
 
 1. 上部のナビゲーション リボンから **[優先順位の再設定]** を選択し、**[最上位 (最も優先度の高い) に移動する]** を選択します。
 
-1. **[データ損失防止]** ウィンドウで、 **[更新]** を選択し、[ポリシー] タブの **[順序]** の列で優先順位を確認します。
+1. **[データ損失防止]** ウィンドウで、**[更新]** を選択し、[ポリシー] タブの **[順序]** の列で優先順位を確認します。
 
 EmployeeID DLP Policy が他のポリシーよりも優先されるように、ポリシーの優先順位を更新しました。
 
@@ -220,11 +220,11 @@ EmployeeID DLP Policy が他のポリシーよりも優先されるように、�
 
 1. 引き続き、**SC-401-CL1\admin** アカウントで Client 1 VM (SC-401-CL1) にログインし、Joni Sherman としてサインインしておく必要があります。
 
-1. InPrivate ウィンドウで **Microsoft Edge** を開くには、タスク バーから Microsoft Edge を右クリックし、**[新しい InPrivate ウィンドウ]** を選択します。
+1. InPrivate ウィンドウで**Microsoft Edge** を開くには、タスク バーから Microsoft Edge を右クリックし、**[新しい InPrivate ウィンドウ]** を選択します。
 
-1. **`https://security.microsoft.com`** に移動して Microsoft Defender XDR にアクセスし、**MOD 管理者**である `admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
+1. **`https://security.microsoft.com`** に移動して Microsoft Defender XDR にアクセスし、**MOD 管理者**である`admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
 
-1. 左側のサイドバーで、**[システム]** > **[設定]** を選択し、**[クラウド アプリ]** を選択します。
+1. 左側のサイドバーで、**[システム]** >**[設定]** を選択し、**[クラウド アプリ]** を選択します。
 
 1. **[クラウド アプリ]** ウィンドウの左ペインで、**[情報保護]** セクションまで下にスクロールし、**[Microsoft Information Protection]** を選択します。
 
@@ -240,23 +240,23 @@ Defender でファイル検査が有効になり、ファイル ポリシーで�
 
 このタスクでは、OneDrive と SharePoint のクレジット カード番号を含むファイルを特定して検疫するファイル ポリシーを Microsoft Defender で作成します。
 
-1. 引き続き Client 1 VM (SC-401-CL1) に **SC-401-CL1\admin** アカウントでログインしている必要があります。
+1. 引き続き Client 1 VM (SC-401-CL1) に**SC-401-CL1\admin** アカウントでログインしている必要があります。
 
-1. Joni Sherman としてサインインしている Microsoft Edge ウィンドウに戻ります。
+1. Joni Sherman としてサインインしている Microsoft Edge ウィンドウに戻ります。 タブを更新して、新しいアクセス許可がアクティブになっていることを確認します。
 
-1. **Microsoft Defender** ポータルの左側のナビゲーションで、**[クラウド アプリ]** > **[ポリシー]** を選択し、**[ポリシー管理]** を選択します。
+1. **Microsoft Defender** ポータルの左側のナビゲーションで、**[クラウド アプリ]** >**[ポリシー]** を選択し、**[ポリシー管理]** を選択します。
 
-1. **[ポリシー]** ページで、 **[+ ポリシーを作成]** を選択し、 **[ファイル ポリシー]** を選択します。
+1. **[ポリシー]** ページで、**[+ ポリシーを作成]** を選択し、**[ファイル ポリシー]** を選択します。
 
 1. **[ファイル ポリシーの作成]** ページで、次の構成を行います。
 
-   - **ポリシー名**: `Credit card information for files`
-   - **ポリシーの重大度**: **低**
-   - **カテゴリ**: **DLP**
-   - **説明**: `Protect credit card numbers from being shared in files.`
+   - **ポリシー名**:`Credit card information for files`
+   - **ポリシーの重大度**:**低**
+   - **カテゴリ**:**DLP**
+   - **説明**:`Protect credit card numbers from being shared in files.`
    - **[次のすべてに一致するファイル] セクション**で、次を行います。
       - 最初のフィルターの場合は、ドロップダウンを次のように構成します。**アクセス レベルが次と等しい**、公開 (**インターネット**)、公開、外部に [内部] を追加します。
-      - 2 番目のフィルターでは、ドロップダウンを次のように構成します。 **最終変更後 (日付)** および今日の日付を使用します。
+      - 2 番目のフィルターでは、ドロップダウンを次のように構成します。**最終変更後 (日付)** および今日の日付を使用します。
 
           ![内部オプションが追加された、一致するファイルのドロップダウンを示すスクリーンショット。](../Media/files-matching-internal.png)
 

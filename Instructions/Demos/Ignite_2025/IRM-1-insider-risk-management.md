@@ -12,6 +12,7 @@ Megan Bowen, the Information Security Administrator at Contoso Ltd., is preparin
 1. Configure insider risk levels
 1. Create a DLP policy
 1. Enable Adaptive Protection
+1. (Optional) Investigate insider risk alerts with Security Copilot
 
 ## Task 1 – Enable analytics
 
@@ -22,6 +23,8 @@ In this task, you'll enable Insider Risk Management analytics to surface organiz
 1. Open Microsoft Edge.
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and sign in as **Megan Bowen** (`MeganB@WWLxZZZZZZ.onmicrosoft.com`, where ZZZZZZ is your unique tenant ID). Use the password provided by your lab host.
+
+1. When prompted to **Stay signed in?**, select **Yes**.
 
 1. Select **Get started** on the welcome message for the new Microsoft Purview portal.
 
@@ -73,8 +76,9 @@ In this task, you'll enable indicators that detect risky Copilot activity and DL
 
    **Data loss prevention (DLP) alert indicators** > **Detect when DLP policies generate alerts**
 
-   - Select **+Add policy**
+   - Select **+ Add policy**
    - In the **Add DLP policies** select **Default policy for Teams**, then select **Add** at the bottom of the flyout.
+   - After you add the policy, select the checkbox for **Generating alerts from selected DLP policies**.
 
 1. Select **Save** at the bottom of the page.
 
@@ -113,7 +117,7 @@ In this task, you'll create a Risky AI usage policy for the Mark 8 Project Team.
 
 1. Back on the **Exclude users and groups (optional)** page, select **Next**.
 
-1. On the **Decide whether to prioritize content** page, select **I want to prioritize content**, then select only the checkbox for **Sharepoint sites**. If any other options are selected, deselect them.
+1. On the **Decide whether to prioritize content** page, select **I want to prioritize content**, then select only the checkbox for **SharePoint sites**. If any other options are selected, deselect them.
 
 1. Select **Next**.
 
@@ -133,11 +137,13 @@ In this task, you'll create a Risky AI usage policy for the Mark 8 Project Team.
    - Receiving sensitive response from Copilot
    - Entering risky prompt in other AI apps
 
+    >[!Note] **Note:** If these triggers are already selected, confirm them and continue.
+
 1. Select **Next**.
 
 1. On the **Choose thresholds for triggering events** page, select **Apply built-in thresholds**, then select **Next**.
 
-1. On the **Indicators** page, confirm that the Copilot, other AI apps, and DLP indicators are selected, then select **Next**.
+1. On the **Indicators** page, expand each category and confirm that the Copilot, other AI apps, and DLP indicators are selected, then select **Next**.
 
 1. On the **Detection options** page, leave the defaults selected, then select **Next**.
 
@@ -153,7 +159,7 @@ You've created a policy that detects risky prompts and responses in Copilot and 
 
 In this task, you'll create a notice template to notify users when risky AI activity is detected.
 
-1. In the Microsoft Purview portal, from the **Policies** page, select **Notice templates** from the left navigation.
+1. In the Microsoft Purview portal, go to **Solutions** > **Insider Risk Management** > **Notice templates**.
 
 1. On the **Notice templates** page, select **+ Create notice template**.
 
@@ -237,7 +243,7 @@ In this task, you'll create a DLP policy that blocks external sharing when risky
 
 1. On the **New policy created** page, select **Done**.
 
-You've created a DLP policy that blocks external sharing for users with risky Copilot activity, containing exposure before it spreads.
+You've created a DLP policy that blocks users at elevated risk levels from sharing personally identifiable information (PII) with external recipients, helping prevent sensitive data exposure.
 
 ## Task 8 – Enable Adaptive Protection
 
@@ -247,8 +253,34 @@ In this task, you'll enable Adaptive Protection so DLP reacts automatically to r
 
 1. Set the toggle to **On** under **Adaptive Protection**, then select **Save** to enable Adaptive Protection.
 
-You've turned on Adaptive Protection, allowing DLP policies to tighten enforcement the moment risky AI behavior is detected.
+You've enabled Adaptive Protection so DLP policies automatically adjust to apply stricter controls when a user reaches an elevated insider risk level.
+
+---
+
+## Optional task – Investigate insider risk alerts with Security Copilot
+<!-- Old optional task intro
+Now that you've configured Insider Risk Management to detect risky AI activity, you can see how alerts are investigated using **Security Copilot**. This interactive demo shows how Security Copilot and Copilot for Security Agents help review alert details, analyze user activity, and guide remediation actions within Microsoft Purview.
+-->
+
+Now that you've configured Insider Risk Management to detect risky AI activity, you can see how alerts are investigated in Insider Risk Management. This interactive demo shows how to review an alert and use the **Security Copilot Alert triage agent** to examine alert details, analyze user activity, and guide remediation actions within Microsoft Purview.
+
+You can explore this click-through experience at `https://aka.ms/IRMlabIgnite2025`.
+
+---
 
 ## Lab complete
 
 You enabled analytics, set exclusions, and turned on AI risk indicators. You then built a Risky AI usage policy, connected it to Adaptive Protection, and linked it with DLP enforcement. With these controls in place, Contoso can detect risky Copilot and AI activity and automatically strengthen protections before sensitive data is exposed.
+
+---
+
+## Share your feedback
+
+Thank you for completing **LAB547 – Detect and adapt to risky AI usage with Insider Risk Management**.
+
+Your feedback helps improve future labs and events.
+
+Scan the QR codes at [https://aka.ms/IgniteLab547feedback](https://aka.ms/IgniteLab547feedback), or use the links below:
+
+- On the Ignite page: [Give feedback](https://aka.ms/ignite25-feedback)  
+- Lab content issues: [Open an issue in the repo](https://aka.ms/ignite25-LAB547)

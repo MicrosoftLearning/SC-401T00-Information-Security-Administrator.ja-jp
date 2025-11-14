@@ -27,9 +27,9 @@ lab:
 
 1. **SC-401-CL1\admin** アカウントで Client 1 VM (SC-401-CL1) にログインします。
 
-1. InPrivate ウィンドウで **Microsoft Edge** を開くには、タスク バーから Microsoft Edge を右クリックし、**[新しい InPrivate ウィンドウ]** を選択します。
+1. InPrivate ウィンドウで**Microsoft Edge** を開くには、タスク バーから Microsoft Edge を右クリックし、**[新しい InPrivate ウィンドウ]** を選択します。
 
-1. **`https://purview.microsoft.com`** に移動し、**MOD 管理者**である `admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
+1. **`https://purview.microsoft.com`** に移動し、**MOD 管理者**である`admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
 
 1. 左側のサイドバーで、**[設定]**、**[役割とスコープ]**、**[役割グループ]** の順に選択します。
 
@@ -45,7 +45,7 @@ lab:
 
 1. **[電子情報開示管理者の管理]** ページで、**[次へ]** を選択します。
 
-1. **[役割グループを確認して完了]** ページで、 **[保存]** を選択します。
+1. **[役割グループを確認して完了]** ページで、**[保存]** を選択します。
 
 1. **[役割グループを正常に更新しました]** ページで、**[完了]** を選択します。
 
@@ -65,10 +65,10 @@ Joni Sherman に電子情報開示アクセス許可を割り当てて、調査�
 
 1. **[新しい検索]** ダイアログで、次のように入力します。
 
-   - **ケース名**: `Financial Data Exposure Review`
-   - **検索名**: `Financial Data Leak Investigation`
-   - **ケースの説明**: `Case opened to support security investigation efforts by identifying potential exposure of sensitive financial terms in Microsoft 365 content.`
-   - **検索の説明**: `Search targets common high-risk financial keywords to support data security monitoring and policy validation.`
+   - **ケース名**:`Financial Data Exposure Review`
+   - **検索名**:`Financial Data Leak Investigation`
+   - **ケースの説明**:`Case opened to support security investigation efforts by identifying potential exposure of sensitive financial terms in Microsoft 365 content.`
+   - **検索の説明**:`Search targets common high-risk financial keywords to support data security monitoring and policy validation.`
 
 1. **[作成]** を選択して、検索を作成します。
 
