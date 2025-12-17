@@ -1,4 +1,4 @@
-# Session 1 - Demo 2 – Implement and manage DLP policies
+# Session 1 - Demo 2 – Create a DLP policy from a built-in template
 
 In this demo, you'll see how an administrator creates a data loss prevention (DLP) policy using a built-in template. The demo shows how to start from a template, make a small customization to the data being detected, and apply the policy so it protects Teams messages in Microsoft 365.
 
@@ -21,7 +21,7 @@ In this task, you'll create a DLP policy using a built-in template and customize
 
 1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal.
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
 1. Select **Solutions** > **Data Loss Prevention** > **Policies**.
 
