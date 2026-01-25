@@ -24,6 +24,8 @@ lab:
 1. Microsoft Defender XDR を初期化する
 1. Microsoft Entra で多要素認証を構成する
 
+**推定所要時間:** 30 ～ 45 分
+
 ## タスク 1 - Microsoft Purview ポータルで監査を有効にする
 
 このタスクでは、Microsoft Purview ポータルで監査を有効にして、ポータル アクティビティを監視します。
@@ -32,9 +34,9 @@ lab:
 
 1. Microsoft Edge を開きます。
 
-1. **Microsoft Edge** で、`https://purview.microsoft.com` に移動し、**MOD 管理者**である`admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
+1. **Microsoft Edge** で、`https://purview.microsoft.com` に移動し、**MOD 管理者**である `admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
 
-1. Microsoft Edge で、Microsoft Purview ポータル`https://purview.microsoft.com` にアクセスして、ログインします。
+1. Microsoft Edge で、Microsoft Purview ポータル `https://purview.microsoft.com` にアクセスして、ログインします。
 
 1. 新しい Microsoft Purview ポータルに関するメッセージが画面に表示されます。 **[はじめに]** を選択して、新しいポータルにアクセスします。
 
@@ -56,7 +58,7 @@ lab:
     >
     >1. Windows ボタンを右クリックし、**[ターミナル (管理者)]** を選択して、管理者特権のターミナル ウィンドウを開きます。  
     >
-    >1. 最新の**Exchange Online PowerShell** モジュールをインストールします。
+    >1. 最新の **Exchange Online PowerShell** モジュールをインストールします。
     >
     >     ```powershell
     >     Install-Module ExchangeOnlineManagement
@@ -98,7 +100,7 @@ lab:
     >     Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
     >     ```
     >
-    >    [監査] が有効になると、このコマンドにより**_True_** が返されます。
+    >    [監査] が有効になると、このコマンドにより **_True_** が返されます。
 
 Microsoft 365 で監査を正常に有効にしました。
 
@@ -106,7 +108,7 @@ Microsoft 365 で監査を正常に有効にしました。
 
 このタスクでは、組織向けにデバイスのオンボードを有効にします。
 
-1. Client 1 VM (SC-401-CL1) には引き続き**SC-401-CL1\admin** アカウントでログインし、Microsoft Purview には MOD 管理者アカウントでログインしている必要があります。
+1. Client 1 VM (SC-401-CL1) には引き続き **SC-401-CL1\admin** アカウントでログインし、Microsoft Purview には MOD 管理者アカウントでログインしている必要があります。
 
 1. 左側のサイドバーから **[設定]** を選択し、**[デバイスのオンボード]** を展開します。
 
@@ -122,9 +124,9 @@ Microsoft 365 で監査を正常に有効にしました。
 
 このタスクでは、インサイダー リスク管理の分析とデータ共有を有効にします。
 
-1. Client 1 VM (SC-401-CL1) には引き続き**SC-401-CL1\admin** アカウントでログインし、Microsoft Purview には MOD 管理者アカウントでログインしている必要があります。
+1. Client 1 VM (SC-401-CL1) には引き続き **SC-401-CL1\admin** アカウントでログインし、Microsoft Purview には MOD 管理者アカウントでログインしている必要があります。
 
-1. Microsoft Purview で、**[設定]** >**[インサイダー リスク管理]** >**[分析]** に移動します。
+1. Microsoft Purview で、**[設定]** > **[インサイダー リスク管理]** > **[分析]** に移動します。
 
 1. これらの設定を **[オン]** に切り替えます。
 
@@ -195,11 +197,11 @@ You have successfully reset passwords for lab exercises.
 
 このタスクでは、Microsoft Defender に移動し、Microsoft Defender XDR が初期化されるまで待機します。
 
-1. Client 1 VM (SC-401-CL1) には引き続き**SC-401-CL1\admin** アカウントでログインし、Microsoft Purview には MOD 管理者アカウントでログインしている必要があります。
+1. Client 1 VM (SC-401-CL1) には引き続き **SC-401-CL1\admin** アカウントでログインし、Microsoft Purview には MOD 管理者アカウントでログインしている必要があります。
 
 1. **Microsoft Edge** で、**`https://security.microsoft.com/`** に移動して Microsoft Defender を開きます。
 
-1. ナビゲーション ウィンドウで、**[調査と対応]** >**[インシデントとアラート]** >**[インシデント]** を選択します。
+1. ナビゲーション ウィンドウで、**[調査と対応]** > **[インシデントとアラート]** > **[インシデント]** を選択します。
 
     > [!Note] **注:Microsoft Defender XDR の初期化**
     >
@@ -215,9 +217,9 @@ Microsoft Defender XDR を初期化しています。 セットアップが完�
 
 このタスクでは、管理者アカウントの多要素認証 (MFA) を構成して、Microsoft Entra やその他の接続済みの Microsoft 365 サービスへのアクセスをセキュリティで保護します。
 
-1. **Microsoft Edge** で**`https://entra.microsoft.com/`** に移動して Microsoft Entra を開きます。
+1. **Microsoft Edge** で **`https://entra.microsoft.com/`** に移動して Microsoft Entra を開きます。
 
-1. **[最初にアプリを取得します]** 画面でデバイスのアプリ ストアから**Microsoft Authenticator** アプリをインストールするか、既にインストールされている場合はそれを開きます。
+1. **[最初にアプリを取得します]** 画面でデバイスのアプリ ストアから **Microsoft Authenticator** アプリをインストールするか、既にインストールされている場合はそれを開きます。
 
    ![多要素認証の [アカウントのセキュリティ保護] 画面を示すスクリーンショット。](../Media/mfa-entra.png)
 
