@@ -2,6 +2,12 @@
 lab:
   title: 演習 1 - インサイダー リスク管理を実装する
   module: Module 4 - Implement Insider Risk Management
+  description: ロールの割り当て、インジケーターの有効化、ポリシーの作成、Defender シグナルの統合、優先ユーザーと通知の設定を行って、インサイダー リスク管理を構成します。
+  duration: 120 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Purview
 ---
 
 ## WWL テナント - 使用条件

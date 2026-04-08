@@ -2,6 +2,10 @@
 lab:
   title: 演習 2 - エンドポイント DLP を実装および管理する
   module: Module 2 - Implement Data Loss Prevention
+  description: デバイスをオンボードし、エンドポイント DLP ポリシーを作成して、Windows デバイス上の機密データを保護するようにエンドポイントの設定とブラウザーのサポートを構成します。
+  duration: 90 minutes
+  level: 200
+  islab: true
 ---
 
 # ラボ 2 - 演習 2 - エンドポイント DLP を実装および管理する

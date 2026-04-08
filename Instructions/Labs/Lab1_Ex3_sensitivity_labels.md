@@ -2,6 +2,15 @@
 lab:
   title: 演習 3 - 秘密度ラベルを作成して管理する
   module: Module 1 - Implement Information Protection
+  description: Microsoft Purview と Defender for Cloud Apps で、暗号化、自動ラベル付け、ポリシー統合を使って秘密度ラベルを構成して発行します。
+  duration: 90 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Defender
+    - Microsoft Defender for Cloud
+    - Microsoft Defender for Cloud Apps
+    - Microsoft Purview
 ---
 
 # ラボ 1 - 演習 3 - 秘密度ラベルを作成して管理する

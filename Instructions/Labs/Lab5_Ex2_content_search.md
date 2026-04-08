@@ -2,6 +2,12 @@
 lab:
   title: 演習 2 - コンテンツ検索を実行する
   module: Module 5 - Audit and search activity in Microsoft Purview
+  description: 電子情報開示のアクセス許可を割り当て、キーワードベースのコンテンツ検索を実行して、Microsoft 365 全体で機密データを明らかにします。
+  duration: 30 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Microsoft Purview
 ---
 
 ## WWL テナント - 使用条件

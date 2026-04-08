@@ -2,7 +2,12 @@
 lab:
   title: 演習 1 - コンプライアンス ロールとセキュリティ ロールを管理する
   module: Module 1 - Implement Information Protection
+  description: 必要な管理者ロールを割り当て、Microsoft Purview ポータルを調べて、コンプライアンスとセキュリティのタスクに備えます。
+  duration: 25 minutes
+  level: 100
+  islab: true
 ---
+
 ## WWL テナント - 使用条件
 
 講師が指導するトレーニング配信の一環としてテナントを提供されている場合は、講師が指導するトレーニングでハンズオンラボをサポートする目的でテナントを利用できることに注意してください。

@@ -2,6 +2,13 @@
 lab:
   title: 演習 1 - AI 環境でデータを保護する
   module: Module 6 - Protect data in AI environments
+  description: DLP、インサイダー リスク、コミュニケーション コンプライアンスのポリシーを作成して確認し、AI 用 Microsoft Purview DSPM を使って AI 対話で機密データを保護するためのデータ評価を実行します。
+  duration: 45 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Copilot
+    - Microsoft Purview
 ---
 
 ## WWL テナント - 使用条件
