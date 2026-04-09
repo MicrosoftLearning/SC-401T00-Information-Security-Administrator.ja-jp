@@ -2,6 +2,13 @@
 lab:
   title: 秘密度、DLP、およびアイテム保持ポリシーを検証する
   module: 'Policy validation - Validate sensitivity, DLP, and retention policies'
+  description: Microsoft 365 アプリ全体で、秘密度ラベル、DLP ポリシー、保持ラベルの動作をテストして検証します。
+  duration: 30 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Microsoft 365
+    - Microsoft 365 Apps
 ---
 
 ## WWL テナント - 使用条件

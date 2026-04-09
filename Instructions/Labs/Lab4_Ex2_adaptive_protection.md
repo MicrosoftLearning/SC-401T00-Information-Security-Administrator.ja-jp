@@ -2,6 +2,12 @@
 lab:
   title: 演習 2 - 適応型保護を実装する
   module: Module 4 - Implement Insider Risk Management
+  description: インサイダー リスク ポリシーと DLP および条件付きアクセスをリンクし、Microsoft Purview と Entra でリスクベースの制御を適用して、適応型保護を構成します。
+  duration: 60 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Purview
 ---
 
 # ラボ 4 - 演習 2 - 適応型保護を実装する

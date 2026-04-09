@@ -2,7 +2,14 @@
 lab:
   title: 演習 4 - Microsoft Purview Message Encryption をデプロイする
   module: Module 1 - Implement Information Protection
+  description: Microsoft Purview Message Encryption を適用するメール フロー ルールを構成し、免責事項を追加して、暗号化されたメールの動作を検証します。
+  duration: 45 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Microsoft Purview
 ---
+
 <!--
 
 =======

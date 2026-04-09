@@ -2,7 +2,16 @@
 lab:
   title: 演習 1 - DLP ポリシーを実装して管理する
   module: Module 2 - Implement Data Loss Prevention
+  description: シミュレーション モード、PowerShell 構成、ファイル ポリシーの適用など、Microsoft Purview と Defender についての DLP ポリシーを作成、テスト、管理します。
+  duration: 90 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft 365
+    - Microsoft Defender
+    - Microsoft Purview
 ---
+
 ## WWL テナント - 使用条件
 
 講師が指導するトレーニング配信の一環としてテナントを提供されている場合は、講師が指導するトレーニングでハンズオンラボをサポートする目的でテナントを利用できることに注意してください。
