@@ -2,6 +2,10 @@
 lab:
   title: 演習 1 - 保持ポリシーを構成する
   module: Module 3 - Implement and manage retention
+  description: Microsoft Purview で自動適用やアダプティブ スコープを含む保持ラベルとポリシーを作成および管理し、データ回復を検証します。
+  duration: 90 minutes
+  level: 200
+  islab: true
 ---
 
 ## WWL テナント - 使用条件
@@ -110,7 +114,7 @@ lab:
 1. **[始めましょう]** ページで、次の情報を入力します。
 
    - **名前**: `Auto-apply Personal Financial PII`
-   - **説明**: `Applies this label to personal financial data to help meet audit and investigation requirements. Retains content for 3 years.`
+   - **説明**: `Applies an existing retention label to personal financial data to support audit and investigation requirements.`
 
 1. [**次へ**] を選択します。
 

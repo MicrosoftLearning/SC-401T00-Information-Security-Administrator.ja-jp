@@ -2,6 +2,10 @@
 lab:
   title: ラボのセットアップ - 管理環境を準備する
   module: Lab setup
+  description: 管理タスク用の環境を準備するために、Microsoft Purview と Defender のコア機能、アクセス許可、サービスを構成します。
+  duration: 45 minutes
+  level: 100
+  islab: true
 ---
 
 ## WWL テナント - 使用条件
@@ -35,8 +39,6 @@ lab:
 1. Microsoft Edge を開きます。
 
 1. **Microsoft Edge** で、`https://purview.microsoft.com` に移動し、**MOD 管理者**である `admin@WWLxZZZZZZ.onmicrosoft.com` としてサインインします (この ZZZZZZ は、ラボ ホスティング プロバイダーから提供された自分専用のテナント プレフィックスです)。 管理者のパスワードは、ラボ ホスティング プロバイダーから支給されます。
-
-1. Microsoft Edge で、Microsoft Purview ポータル `https://purview.microsoft.com` にアクセスして、ログインします。
 
 1. 新しい Microsoft Purview ポータルに関するメッセージが画面に表示されます。 **[はじめに]** を選択して、新しいポータルにアクセスします。
 
@@ -205,7 +207,7 @@ You have successfully reset passwords for lab exercises.
 
     > [!Note] **注:Microsoft Defender XDR の初期化**
     >
-    > ラボ テナントによっては、Microsoft Defender XDR の初期化画面が表示される場合と表示されない場合があります。
+    > ナビゲーションは、Microsoft Defender XDR が既に初期化されているかどうかによって異なる場合があります。 初期化が完了している場合、**[インシデントとアラート]** が、**[調査と対応]** の下ではなく、最上位レベルのオプションとして表示されます。
 
 1. Microsoft Defender XDR が準備中であることを示すメッセージが表示されます。 このプロセスは自動的に実行され、数分かかる場合があります。
 
